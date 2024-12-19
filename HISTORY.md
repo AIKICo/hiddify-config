@@ -1,6 +1,3305 @@
 # Changelog
 
 
+## v10.80.11 (2024-12-18)
+
+### Fix
+
+* Nginx installation. [hiddify-com]
+
+
+## v10.80.8 (2024-12-17)
+
+### Changes
+
+* Optimize background tasks. [hiddify-com]
+
+
+## v10.80.7 (2024-12-15)
+
+### Fix
+
+* Conflict. [hiddify-com]
+
+
+## v10.80.6 (2024-12-15)
+
+### Fix
+
+* Ssh libery packages. [hiddify-com]
+
+
+## v10.80.3 (2024-12-15)
+
+### New
+
+* Speed up cert by parallel req. [hiddify-com]
+
+* Use warp when needed with ssh protocol. [hiddify-com]
+
+* Speedup rendering configs. [hiddify-com]
+
+### Fix
+
+* Bug. [hiddify-com]
+
+* Jinja issue. [hiddify-com]
+
+### Other
+
+* Remove useless configs. [hiddify-com]
+
+* More consistant check of installation hiddify panel. [hiddify-com]
+
+* Speed up installation. [hiddify-com]
+
+
+## v10.80.2 (2024-12-15)
+
+### Changes
+
+* Considering latest change in xray in routing. [hiddify-com]
+
+### Other
+
+* Make status and restart in parallel with hirarchy. [hiddify-com]
+
+* Remove redundent. [hiddify-com]
+
+
+## v10.80.1 (2024-12-15)
+
+### New
+
+* Update to python 3.12. [hiddify-com]
+
+* Add docker install version. [hiddify-com]
+
+* Add docker-init for creating default folders. [hiddify-com]
+
+* Show status in docekr. [hiddify-com]
+
+* Add docker build. [hiddify-com]
+
+* Add docker. [hiddify-com]
+
+* Add background task handler. [hiddify-com]
+
+* Update xray apis. [hiddify-com]
+
+* Add reset owner password button in admin menu. [hiddify-com]
+
+* Reduce the installation permission. [hiddify-com]
+
+* Add seperate REDIS config for main and ssh usage. [hiddify-com]
+
+* Add host key from env variable, make consistent between differnet servers. [hiddify-com]
+
+* Generate xray configs in apply config to fix xray crash cold start. [hiddify-com]
+
+### Changes
+
+* Add install to the menu. [hiddify-com]
+
+* Set hiddify cli permission. [hiddify-com]
+
+### Fix
+
+* Issue in incomplete installation. [hiddify-com]
+
+* New nginx installation. [hiddify-com]
+
+* File name issue. [hiddify-com]
+
+* Mariadb installation. [hiddify-com]
+
+* Docker installer. [hiddify-com]
+
+* Installation progress issue. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Mysql host. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Singbox and nginx common data. [hiddify-com]
+
+* Mysql data permission. [hiddify-com]
+
+* Permission issues. [hiddify-com]
+
+* Ssh bug. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Issue in other services. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Permissions. [hiddify-com]
+
+* Permissions. [hiddify-com]
+
+* Docker taghidd. [hiddify-com]
+
+* Reload issue in docker. [hiddify-com]
+
+* Git-submoudle. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Bugs. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Typo. [hiddify-com]
+
+* Warp status. [hiddify-com]
+
+* Installation bug python missing. [hiddify-com]
+
+* Installation. [hiddify-com]
+
+* Wiregaurd dl signture. [hiddify-com]
+
+* Xray arm sha1. [hiddify-com]
+
+* Permission issues. [hiddify-com]
+
+* Ssh libery bug. [hiddify-com]
+
+* Ssh liberty plus. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Issues and permissions. [hiddify-com]
+
+* Key. [hiddify-com]
+
+### Other
+
+* Update. [hiddify-com]
+
+* Set installed version for all packages. [hiddify-com]
+
+* Only set installed version if instation success. [hiddify-com]
+
+* Fix. [hiddify-com]
+
+* Merge branch 'main' of github.com:hiddify/Hiddify-Manager. [hiddify-com]
+
+* Merge pull request #4603 from kursataktas/hiddify-manager-guru. [Hiddify]
+
+  Introducing Hiddify-Manager Guru on Gurubase.io
+
+* Fix guru badge. [Kursat Aktas]
+
+* Introducing Hiddify-Manager Guru on Gurubase.io. [Kursat Aktas]
+
+* Speed up installation process. [hiddify-com]
+
+* Update. [hiddify-com]
+
+* Update to latest version of nginx. [hiddify-com]
+
+* Refactor package manager, add .lock to a specific version. [hiddify-com]
+
+* Bump panel. [hiddify-com]
+
+* Revert python to 3.10. [hiddify-com]
+
+* Rename splithttp to xhttp. [hiddify-com]
+
+* Reduce the docker size. [hiddify-com]
+
+* Add port range for supporting other protocols. [hiddify-com]
+
+* Update. [hiddify-com]
+
+* Exclude arm build in dev. [hiddify-com]
+
+* Update dependecy. [hiddify-com]
+
+* Update. [hiddify-com]
+
+* Start background tasks. [hiddify-com]
+
+* Improve docker. [hiddify-com]
+
+* Bring mariadb to the local folder. [hiddify-com]
+
+* Sepeate panel installation and run. [hiddify-com]
+
+* Update to xray 24.11.11. [hiddify-com]
+
+* Change to xhttp. [hiddify-com]
+
+* Better prop. [hiddify-com]
+
+* Update README.md. [Hiddify]
+
+* Change permission of all data to 600. [hiddify-com]
+
+* Use https download link. [hiddify-com]
+
+* Check hash during download for more security. [hiddify-com]
+
+* Update CONTRIBUTING.md. [lymanjre]
+
+* Update CONTRIBUTING.md. [lymanjre]
+
+* Update CONTRIBUTING.md. [Hiddify]
+
+* Update README.md. [Hiddify]
+
+
+## v10.70.5 (2024-08-15)
+
+### New
+
+* Add custom version installer UI. [hiddify-com]
+
+### Fix
+
+* Custom version installer. [hiddify-com]
+
+### Other
+
+* Use pypi for version dialog. [hiddify-com]
+
+
+## v10.70.1 (2024-07-30)
+
+### Fix
+
+* Changing default os python version. [hiddify-com]
+
+* Haproxy installation bug. [hiddify-com]
+
+### Other
+
+* Use: domain socket instead of port in splithttp. [hiddify-com]
+
+
+## v10.70.0 (2024-07-29)
+
+### New
+
+* Add custom url test. [hiddify-com]
+
+* Add quic support for splithttp and panel. [hiddify-com]
+
+* Some optimization and add splithttp. [hiddify-com]
+
+### Fix
+
+* Fakesni bugs. [hiddify-com]
+
+* Singbox bug. [hiddify-com]
+
+* Cert bugs. [hiddify-com]
+
+* Firewall for quic. [hiddify-com]
+
+* Haproxy ss bug. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Ssh error bug. [hiddify-com]
+
+* Cert issue first install. [hiddify-com]
+
+* Bugs. [hiddify-com]
+
+* Split http bug. [hiddify-com]
+
+* Permission for sshd. [hiddify-com]
+
+* Version. [hiddify-com]
+
+* Tls bug in fake domain. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+### Other
+
+* Show all domain configs in cli. [hiddify-com]
+
+* Merge branch 'haproxyv3' [hiddify-com]
+
+* Update haproxy to v3. [hiddify-com]
+
+* Add splithttp h2 to nginx. [hiddify-com]
+
+* Revert using map. [hiddify-com]
+
+* Change to map for extra performance. [hiddify-com]
+
+* Update app.cfg. [Hiddify]
+
+* Remove cdn from getting cert. [hiddify-com]
+
+* Merge pull request #4287 from SATORU-FUJINUMA/main. [Hiddify]
+
+  Add automated support for LXC containers
+
+* Create README.fa.md. [Satoru]
+
+* Update README.md. [Satoru]
+
+* README.md for LXC containers. [Satoru]
+
+* Add utils to bind container ports automatically. [SATORU-FUJINUMA]
+
+* Fix fedora LXD installation. [SATORU-FUJINUMA]
+
+* Add scripts to bind ports from LXC. [SATORU-FUJINUMA]
+
+* Fix echo bug. [SATORU-FUJINUMA]
+
+* Print admin links and TUI information. [SATORU-FUJINUMA]
+
+* Add printing admin links. [SATORU-FUJINUMA]
+
+* Make alma/rocky suport. [SATORU-FUJINUMA]
+
+* Rename operation dir. [SATORU-FUJINUMA]
+
+* Be verbose about OS detection. [Satoru]
+
+* Add LXD setup file. [SATORU-FUJINUMA]
+
+
+## v10.50.4 (2024-07-17)
+
+### Fix
+
+* Small bugs. [hiddify-com]
+
+
+## v10.50.3 (2024-07-14)
+
+### Fix
+
+* Installation but. [hiddify-com]
+
+
+## v10.50.2 (2024-07-14)
+
+### Fix
+
+* Panel version. [hiddify-com]
+
+### Other
+
+* Update LICENSE to GPLv3. [Hiddify]
+
+* Update README.md. [Hiddify]
+
+* Merge pull request #4238 from mmmray/patch-1. [Hiddify]
+
+  Update README.md
+
+* Update README.md. [mmmray]
+
+  https://github.com/XTLS/Xray-core/pull/2459#issuecomment-2079547682
+
+
+## v10.50.1 (2024-07-14)
+
+### Fix
+
+* Sing routing. [hiddify-com]
+
+
+## v10.50.0 (2024-07-14)
+
+### Fix
+
+* Bug. [hiddify-com]
+
+* Diasplay bug. [hiddify-com]
+
+* Ipv6 cert. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Ssh password auth warning bug. [hiddify-com]
+
+* Singbox routing issue. [hiddify-com]
+
+* Custom version installer. [hiddify-com]
+
+* Custom version installer. [hiddify-com]
+
+* Wireguard enable/disable users. [hiddify-com]
+
+### Other
+
+* Force installation in venv. [hiddify-com]
+
+* Allow host to be empty. [hiddify-com]
+
+* Make reality and vless independently enable or disable. [hiddify-com]
+
+* Hidding configs. [hiddify-com]
+
+* More optimization in api communication. [hiddify-com]
+
+
+## v10.30.6 (2024-07-06)
+
+### Fix
+
+* Shadowsocks firewall. [hiddify-com]
+
+### Other
+
+* Remove old domains from crts. [hiddify-com]
+
+
+## v10.30.5 (2024-07-03)
+
+### Other
+
+* Chg hiddify-panel user shell to bash. [hiddify-com]
+
+
+## v10.30.4 (2024-07-02)
+
+### Fix
+
+* Bug. [hiddify-com]
+
+
+## v10.30.3 (2024-07-02)
+
+### Fix
+
+* Update usage bug. [hiddify-com]
+
+
+## v10.30.2 (2024-07-02)
+
+### Fix
+
+* Bug. [hiddify-com]
+
+
+## v10.30.1 (2024-07-02)
+
+### Fix
+
+* Permission issue. [hiddify-com]
+
+* Installer venv. [hiddify-com]
+
+### Other
+
+* Fix. [hiddify-com]
+
+* Fix venv. [hiddify-com]
+
+
+## v10.30.0 (2024-07-02)
+
+### Changes
+
+* Just renaming ss-faketls.service to hiddify-ss-faketls.service. [Sarina]
+
+* Remove develop version installation option from menu.sh. [Sarina]
+
+* Beta is venv compatible. [Sarina]
+
+* Better ui. [Sarina]
+
+* Run remove deprecated things bash script. [Sarina]
+
+* Fix bug & refactor code & less logs. [Sarina]
+
+* Refactor. [Sarina]
+
+### Fix
+
+* Wrong mode. [I'm Sarina Esmailzadeh Too]
+
+* Bug related to hiddify-cli.service the hiddify-cli arguments were changed by the programmer but not announced. [Sarina]
+
+* Fix: hide wg-quick@warp.service (warp) status ,when it's not enabled. [Sarina]
+
+* Warp bug. [Sarina]
+
+* Warp incorrect mode. [Sarina]
+
+* Bug. [Sarina]
+
+* Bug. [Sarina]
+
+* Venv in installer script. [Sarina]
+
+* Bugs. [Sarina]
+
+* Loop. [hiddify-com]
+
+* Update. [hiddify-com]
+
+* Bugs. [Sarina]
+
+* Run command with 'su hiddify-panel' in virtual env. [Sarina]
+
+* Hiddify-panel service venv bug. [Sarina]
+
+* Build hiddifypanel package from source in debug mode. [Sarina]
+
+* Parsing jinja files  bug. [Sarina]
+
+* Jinja parsing bug. [Sarina]
+
+* Haproxy install check. [Sarina]
+
+### Other
+
+* Update. [hiddify-com]
+
+* Update. [hiddify-com]
+
+* Merge branch 'main' of github.com:hiddify/Hiddify-Manager. [hiddify-com]
+
+* Update app.cfg. [Hiddify]
+
+* Update app.cfg. [Hiddify]
+
+* Better panel management. [hiddify-com]
+
+* Better purge. [hiddify-com]
+
+* Better logging. [hiddify-com]
+
+* Do not delete resolveconf. [hiddify-com]
+
+* Only set custom dns config if dns is not working. [hiddify-com]
+
+* Update xray to 1.8.16. [hiddify-com]
+
+* Remove delay in restarting service. [hiddify-com]
+
+* Fix first installation progress windows. [hiddify-com]
+
+* Merge pull request #4190 from Iam54r1n4/devm10-patch-9. [Hiddify]
+
+  Renaming ss-faketls.service to hiddify-ss-faketls.service
+
+* Update disable.sh. [Hiddify]
+
+* Update install.sh. [Hiddify]
+
+* Merge pull request #4175 from Iam54r1n4/devm10-patch7. [Hiddify]
+
+  Fix hiddify-cli service bug
+
+* Merge pull request #4179 from Iam54r1n4/devm10-patch-8. [Hiddify]
+
+  Fix warp incorrect mode
+
+* Merge pull request #4197 from Iam54r1n4/devm10-patch-10. [Hiddify]
+
+  Remove develop version installation option from menu.sh
+
+* Merge pull request #4202 from Iam54r1n4/patch-1. [Hiddify]
+
+  Update CONTRIBUTING.md
+
+* Update CONTRIBUTING.md. [I'm Sarina Esmailzadeh Too]
+
+  This Contribution Guide must be completed. We need people to contribute.
+
+* Merge pull request #4078 from Iam54r1n4/devm10-patch-6. [Hiddify]
+
+  Fix venv in installer script
+
+* Del: installer utils e.g. remove installer isolated utils. [Sarina]
+
+* Del: unwanted change. [Sarina]
+
+* Merge pull request #4098 from Iam54r1n4/devm10-patch-7. [Hiddify]
+
+  Bug fixes
+
+* Merge pull request #4077 from Iam54r1n4/devm10-patch-5. [Hiddify]
+
+  del: useless bash scripts
+
+* Del: useless bash scripts. [Sarina]
+
+* Update. [hiddify-com]
+
+* Update. [hiddify-com]
+
+* Merge pull request #4012 from Iam54r1n4/devm10-patch-4. [Hiddify]
+
+  Add python virtual environment
+
+* Add: python virtual env. [Sarina]
+
+* Update README.md. [Hiddify]
+
+* Update cloud-init.yml. [lymanjre]
+
+
+## v10.20.4 (2024-04-13)
+
+### Fix
+
+* Auto update bug. [hiddify-com]
+
+
+## v10.20.2 (2024-04-12)
+
+### Changes
+
+* Code refactor. [Sarina]
+
+### Fix
+
+* Singbox grpc configs bug. [Sarina]
+
+### Other
+
+* Merge pull request #3971 from Iam54r1n4/devm10-patch-2. [Hiddify]
+
+  Fix singbox grpc configs bug
+
+* Update. [hiddify-com]
+
+
+## v10.20.1 (2024-04-12)
+
+### Fix
+
+* Installation bug. [hiddify-com]
+
+### Other
+
+* Disable stoping services. [hiddify-com]
+
+
+## v10.20.0 (2024-04-12)
+
+### New
+
+* Add exact status. [hiddify-com]
+
+### Fix
+
+* Don't set warp sites when warp isn't enable. [Sarina]
+
+* Warp in custom(domestic) sites mode(xray) [Sarina]
+
+* Bug. [hiddify-com]
+
+* Upgrading issue? [hiddify-com]
+
+* Icmp bug. [hiddify-com]
+
+* Icmp v6 bug. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Some warp issues. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Error if core is not xray. [hiddify-com]
+
+* Dispatcher configs. [Sarina]
+
+* Shadowsocks config condition. [Sarina]
+
+### Other
+
+* Merge pull request #3964 from Iam54r1n4/devm10-patch-1. [Hiddify]
+
+  Fix warp in custom(domestic) sites mode (xray)
+
+* ? [hiddify-com]
+
+* Disable manual config import. [hiddify-com]
+
+* Restart mariadb to fix upgrading issue. [hiddify-com]
+
+* Add delay for restarting cli. [hiddify-com]
+
+* Disable panel services before updating. [hiddify-com]
+
+* Refactor. [hiddify-com]
+
+* Show exact service status. [hiddify-com]
+
+* Fix. [hiddify-com]
+
+* Update haproxy ot 2.9.7. [hiddify-com]
+
+* Update. [hiddify-com]
+
+* Update. [hiddify-com]
+
+* Update. [hiddify-com]
+
+* Re;ove 3.13. [hiddify-com]
+
+* Update python3.13. [hiddify-com]
+
+* Merge branch 'main' of github.com:hiddify/Hiddify-Manager. [hiddify-com]
+
+* Update README.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README_cn.md. [lymanjre]
+
+* Update README_cn.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Remove blinker. [hiddify-com]
+
+* Update xray. [hiddify-com]
+
+* Update pip. [hiddify-com]
+
+* Update cli progrss. [hiddify-com]
+
+* Fewer logs. [hiddify-com]
+
+* Merge pull request #3908 from er888kh/main. [Hiddify]
+
+  Fix various logging policies
+
+* Explicitly set nginx error log level. [Erfan Khadem]
+
+* Fix Xray logging policy. [Erfan Khadem]
+
+  If `access` or `output` paths are omitted, the program sends them
+  through `stdout`, which intern gets writter to the systemd journal.
+
+* Fix default logging level. [Erfan Khadem]
+
+* Enable OOM Killing of Xray. [Erfan Khadem]
+
+* Merge pull request #3927 from Iam54r1n4/devm-disable-config. [Hiddify]
+
+  Disable unwanted configs
+
+* Add: disable configs when not needed (xray) [Sarina]
+
+* Add: disable configs when not needed (singbox) [Sarina]
+
+* Update README_ru.md. [lymanjre]
+
+* Update README_cn.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+
+## v10.14.0 (2024-03-25)
+
+### Fix
+
+* Cli. [hiddify-com]
+
+* Mysql stop. [hiddify-com]
+
+* Typo. [hiddify-com]
+
+### Other
+
+* Start mariadb if not started. [hiddify-com]
+
+* Fix hiddify-cli. [hiddify-com]
+
+* Merge pull request #3872 from cr4zyfish/patch-2. [Hiddify]
+
+  Update hiddify_installer.sh
+
+* Update hiddify_installer.sh. [cr4zyfish]
+
+  Check OS before install (in addition to root check).
+
+
+## v10.12.1 (2024-03-20)
+
+### Other
+
+* Merge pull request #3864 from cr4zyfish/patch-1. [Hiddify]
+
+  Update download_install.sh
+
+* Update download_install.sh. [cr4zyfish]
+
+  Check OS before install
+
+
+## v10.12.0 (2024-03-19)
+
+### Changes
+
+* Disable/enable xray dynamically. [Sarina]
+
+* Improve. [Sarina]
+
+* Refactor. [Sarina]
+
+* Export hpanel essential fields by bash itself. [Sarina]
+
+* Using current.json instead of query from db. [Sarina]
+
+* Use environment and handle enabling/disabling services. [Sarina]
+
+### Fix
+
+* Ipv4 tcp kernel parameter bug. [Sarina]
+
+### Other
+
+* Merge pull request #3836 from Iam54r1n4/dev-patch38. [Hiddify]
+
+  Fix disabling unwanted services in apply/install
+
+* Refactor. [Hiddify]
+
+* Add: read/write permission to .env file only for root. [Sarina]
+
+* Add: install/apply environment generator. [Sarina]
+
+* Merge pull request #3834 from Iam54r1n4/dev-patch37. [Hiddify]
+
+  Fix ipv4 tcp kernel parameter bug
+
+* Update hiddify cli. [hiddify-com]
+
+
+## v10.11.1 (2024-03-16)
+
+### Other
+
+* Remove test and deprecated gost. [hiddify-com]
+
+
+## v10.11.0 (2024-03-15)
+
+### Changes
+
+* Generate .env file in run.sh. [Sarina]
+
+* Src to last commit. [Sarina]
+
+* Refactor (add env file to service) [Sarina]
+
+* More reasonable name. [Sarina]
+
+* Make hiddify-cli a service. [Sarina]
+
+### Fix
+
+* Xray issue. [hiddify-com]
+
+* Hiddify-cli nginx location. [Sarina]
+
+* Typo. [Sarina]
+
+### Other
+
+* Disable logging to file. [hiddify-com]
+
+* Merge pull request #3806 from Iam54r1n4/dev-patch35. [Hiddify]
+
+  Refactor hiddify-cli
+
+* Del: unused code. [Sarina]
+
+* Merge pull request #3805 from Iam54r1n4/dev-patch35. [Hiddify]
+
+  add hiddify cli
+
+* Del: unused command. [Sarina]
+
+* Del: unused things. [Sarina]
+
+* Merge branch 'main' into dev-patch35. [Sarina]
+
+* Del: test comment. [Sarina]
+
+* Add: redirection. [Sarina]
+
+* Add: config file. [Sarina]
+
+* Chg. [Sarina]
+
+* Add: hiddify-next-core(Hiddify Cli) [Sarina]
+
+
+## v10.10.20 (2024-03-11)
+
+### New
+
+* Add http upgrade in xray. [hiddify-com]
+
+### Other
+
+* Upgrade to xray 1.8.9. [hiddify-com]
+
+* Upgrade to singbox 1.8.8. [hiddify-com]
+
+* Merge pull request #3781 from Iam54r1n4/patch-1. [Hiddify]
+
+  Update status.sh
+
+* Update status.sh. [I'm Sarina Esmailzadeh Too]
+
+
+## v10.10.18 (2024-03-10)
+
+### Changes
+
+* Restart.sh. [Sarina]
+
+* Warp status.sh. [Sarina]
+
+* Restart.sh & status.sh  output. [Sarina]
+
+* Restart.sh output. [Sarina]
+
+* Status output format. [Sarina]
+
+### Fix
+
+* Restart script. [Sarina]
+
+* Python install. [hiddify-com]
+
+### Other
+
+* Merge pull request #3779 from Iam54r1n4/dev-patch29. [Hiddify]
+
+  Change restart.sh output
+
+* Update restart.sh. [Hiddify]
+
+* Merge pull request #3776 from Iam54r1n4/dev-patch29. [Hiddify]
+
+  Change in restart.sh & status.sh
+
+* Add: more services to restart script. [Sarina]
+
+* Add: telegram service to status script. [Sarina]
+
+
+## v10.10.16 (2024-03-07)
+
+### Fix
+
+* Bug. [hiddify-com]
+
+
+## v10.10.15 (2024-03-07)
+
+### Fix
+
+* Saving ipv6. [hiddify-com]
+
+* Domain longer than 64 chars. [hiddify-com]
+
+* Cert for long domains. [hiddify-com]
+
+* Wireguard behind firewall. [hiddify-com]
+
+* Self signed cert of long domains. [hiddify-com]
+
+### Other
+
+* Update firewall. [hiddify-com]
+
+
+## v10.10.14 (2024-03-07)
+
+### Fix
+
+* Set setting. [hiddify-com]
+
+* Install of version 8. [hiddify-com]
+
+### Other
+
+* Fix zope not installed. [hiddify-com]
+
+* Set default locale. [hiddify-com]
+
+* Fix; disable auto update. [hiddify-com]
+
+
+## v10.10.12 (2024-03-07)
+
+### Fix
+
+* Update from panel. [hiddify-com]
+
+* Ssh lib link. [hiddify-com]
+
+* Installer. [hiddify-com]
+
+
+## v10.10.11 (2024-03-07)
+
+### Fix
+
+* Release can not be installed. [hiddify-com]
+
+* Release. [hiddify-com]
+
+
+## v10.10.10 (2024-03-07)
+
+### New
+
+* Add custom version installation. [hiddify-com]
+
+* Add more security for first login. [hiddify-com]
+
+* Add faketls. [hiddify-com]
+
+* Add shadowsocks 2022. [hiddify-com]
+
+* Add http upgrade transport. [hiddify-com]
+
+* Add faketls mode. [hiddify-com]
+
+* Add shadowsocks 2022 version. [hiddify-com]
+
+* Add hex and base64encode to jinja. [hiddify-com]
+
+* Force ipv4 if ipv4 enabled. [hiddify-com]
+
+* Optimize memory usage and with more request. [hiddify]
+
+* Add initial child support. [hiddify]
+
+* Add wireguard. [hiddify]
+
+* Add ansi handler. [hiddify]
+
+* Add version to the title. [hiddify]
+
+* Progressbar. [hiddify]
+
+* Add progress_bar. [hiddify]
+
+* Add qr code after update. [hiddify]
+
+* Add upgrade linux packages message. [hiddify]
+
+* Add last version of release and beta in make. [hiddify]
+
+* Add upgrade to download. [hiddify]
+
+* Update from remote. [hiddify]
+
+* Add qr code. [hiddify]
+
+* Add adobe to warp list. [hiddify]
+
+* Support for warp custom sites. [hiddify]
+
+* Show warning in case of password authentication. [hiddify]
+
+* Add vscode path. [hiddify]
+
+* Add debug to makefile. [hiddify]
+
+* Add hiddify-panel source. [hiddify]
+
+* Add grpc reality singbox. [hiddify]
+
+* Add tuic and hysteria to jinja. [hiddify]
+
+* Add jinja parser. [hiddify]
+
+* Add jinja parser. [hiddify]
+
+* Change python version to 3.11. [hiddify]
+
+* Convert api to jinja. [hiddify]
+
+* Add alternative certificate if is fake domain. [hiddify]
+
+* Add rules in firewall for tuic and hysteria. [hiddify]
+
+* Add hystriav2 and tuic. [hiddify]
+
+### Changes
+
+* Refactor. [Sarina]
+
+* Better doc. [Sarina]
+
+* Refactor. [Sarina]
+
+* Better name. [Sarina]
+
+* Include singbox_multiplex jinja file instead of duplicate same code in every config. [Sarina]
+
+* Remove temporary access. [hiddify]
+
+* Root user to hiddify-panel user for running update-usage (in crontab) [Sarina]
+
+* Is_valid_input. [Sarina]
+
+* Better naming. [hiddify]
+
+* Restructure reality hysteria2 tuic port management. [hiddify]
+
+### Fix
+
+* Nginx 403 response (upload backup) [Sarina]
+
+* B ug. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* No commit message. [hiddify-com]
+
+* No commit message. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Installing mysqlclient==2.2.1 with pip(upgrade pip) [Sarina]
+
+* Ipv6 issue in tuic and hysteria. [hiddify-com]
+
+* Refactor. [Sarina]
+
+* Bug. [Sarina]
+
+* Doh (google dns) tested, worked on GET|POST method. [Sarina]
+
+* Faketls bug. [hiddify-com]
+
+* Update bug. [hiddify-com]
+
+* Doh. [Sarina]
+
+* Tgo jinja. [hiddify-com]
+
+* Erlang. [Sarina]
+
+* Erlang mtproto proxy. [Sarina]
+
+* Tgo telegram mtproto library. [Sarina]
+
+* Mtprotoproxy library. [Sarina]
+
+* Haproxy install bug. [hiddify-com]
+
+* Bug in wireguard. [hiddify-com]
+
+* Bug. [hiddify-com]
+
+* Bug in view link. [hiddify-com]
+
+* Bug. [root]
+
+* Jinja.py. [Sarina]
+
+* Bug in rendering configs. [Sarina]
+
+* Netplan dir bug. [Sarina]
+
+* Wireguard bug. [Sarina]
+
+* Bug. [hiddify]
+
+* Installation bug, [hiddify]
+
+* Change ip bug. [hiddify]
+
+* Install bug. [hiddify]
+
+* Update bug. [hiddify]
+
+* Update. [hiddify]
+
+* Installer bug. [hiddify]
+
+* Bug. [hiddify]
+
+* Static files. [hiddify]
+
+* Apply. [hiddify]
+
+* Bug. [hiddify]
+
+* Bug. [hiddify]
+
+* Typo. [hiddify]
+
+* Warning. [hiddify]
+
+* Installed panel version. [hiddify]
+
+* Issue  in update and install. [hiddify]
+
+* Bug. [hiddify]
+
+* Bug in wiregaurd. [hiddify]
+
+* Progressbar. [hiddify]
+
+* Progressbar. [hiddify]
+
+* Bug for not exiting from new processbar. [hiddify]
+
+* Warp_plus_code. [hiddify]
+
+* Bug in pre-release version. [hiddify]
+
+* Update bug. [hiddify]
+
+* Hysteria2 server side config. [Sarina]
+
+* Exit progress bar when it finishs. [hiddify]
+
+* Bug in release. [hiddify]
+
+* Make hysteria server side config dynamically from DB. [Sarina]
+
+* Update usage bug. [hiddify]
+
+* Update usage bug. [hiddify]
+
+* Beta. [hiddify]
+
+* Bug in lastversion. [hiddify]
+
+* Bug. [hiddify]
+
+* Bug. [hiddify]
+
+* Update bug. [hiddify]
+
+* Firewall. [hiddify]
+
+* Cert bug. [hiddify]
+
+* Acme.sh bug. [hiddify]
+
+* Cert issue. [hiddify]
+
+* Bug. [hiddify]
+
+* Bug. [hiddify]
+
+* Bug. [hiddify]
+
+* Bug. [hiddify]
+
+* Not finished message for updating. [hiddify]
+
+* Version bug. [hiddify]
+
+* Acme.sh. [hiddify]
+
+* Cert of long and restricted domains. [hiddify]
+
+* Update usage bug. [hiddify]
+
+* Fix: @ [hiddify]
+
+* Bug. [hiddify]
+
+* Paths. [hiddify]
+
+* Common.conf.j2. [Sarina]
+
+* Is_domain_valid regex. [Sarina]
+
+* Using commander.py update-usage instead of using update_usage.sh script directly. [Sarina]
+
+* Validators. [Sarina]
+
+* Bug. [Sarina]
+
+* Firewall udp bug. [hiddify]
+
+* Bug. [hiddify]
+
+* Firewall bug. [hiddify]
+
+* Dns server. [hiddify]
+
+* Bug. [hiddify]
+
+* Downgrade. [hiddify]
+
+* Update issue. [hiddify]
+
+* Replacement of dns with systemd. [hiddify]
+
+* Cert bug. [hiddify]
+
+* Bug. [hiddify]
+
+* Bug in cert. [hiddify]
+
+* Haproxy issues for ssl cert. [hiddify]
+
+* Firewall issues. [hiddify]
+
+* Haproxy first use. [hiddify]
+
+* Panel link issue. [hiddify]
+
+* Bug in panel links. [hiddify]
+
+* Check. [hiddify]
+
+* Typo. [hiddify]
+
+* First link bug. [hiddify]
+
+* Bugs. [hiddify]
+
+* Better display. [hiddify]
+
+* Dns issue. [hiddify]
+
+* Download location. [hiddify]
+
+* Missing. [hiddify]
+
+* Notifs. [hiddify]
+
+* Directory. [hiddify]
+
+* Bug. [hiddify]
+
+* Beta version issue. [hiddify]
+
+* Bug. [hiddify]
+
+* Firewall. [hiddify]
+
+* Question on upgrade. [hiddify]
+
+* Remove remote access. [hiddify]
+
+* Bug. [hiddify]
+
+* Singbox install issue. [hiddify]
+
+* Password auth notifi issue. [hiddify]
+
+* Warp_sites bug. [hiddify]
+
+* Not showing global ip. [hiddify]
+
+* Add support for fake domains. [hiddify]
+
+* Singbox installation bug. [hiddify]
+
+* Issues bug. [hiddify]
+
+* First release bug. [hiddify]
+
+* Getting cert. [hiddify]
+
+* Issues. [hiddify]
+
+* Bug. [hiddify]
+
+* Certificate issue. [hiddify]
+
+* Cfg path. [hiddify]
+
+* Naming. [hiddify]
+
+* Jinja issue. [hiddify]
+
+* Bug. [hiddify]
+
+* Make file. [hiddify]
+
+* Bug. [hiddify]
+
+* Bug in static files. [hiddify]
+
+* Typo. [hiddify]
+
+* Exit code. [hiddify]
+
+* No-gui. [hiddify]
+
+* Mtproxy. [hiddify]
+
+* Bug in vscode launch. [hiddify]
+
+* Path issue. [hiddify]
+
+* Path issue. [hiddify]
+
+* Comment(remove) replacement ssh_server_port in bash. [Sarina]
+
+* Using jinja "exec" function instead of specific functions. [Sarina]
+
+* TEMP_LINK_VALID_TIME variable in def-link.conf.j2. [Sarina]
+
+* Common/jinja.py encoding bug. [Sarina]
+
+* Prerelease. [hiddify]
+
+* Naming bug. [hiddify]
+
+* Bug. [hiddify]
+
+* Trojan grpc. [hiddify]
+
+* Bug. [hiddify]
+
+* Haproxy bug. [hiddify]
+
+* Haproxy issue. [hiddify]
+
+* Forward. [hiddify]
+
+* Bug. [hiddify]
+
+* Routing. [hiddify]
+
+* Xray multi inbounds. [hiddify]
+
+* Reality jinja. [hiddify]
+
+* Bug. [hiddify]
+
+* Ssl. [hiddify]
+
+* Bugs. [hiddify]
+
+* Progress. [hiddify]
+
+* Vless bug. [hiddify]
+
+* Ssl certs. [hiddify]
+
+* Back button. [hiddify]
+
+* H2_vless_grpc_new.json.j2 typo (xray) [Sarina]
+
+* Missed serviceName (xray) [Sarina]
+
+* Missed path h2_ss_grpc_new.json.j2 (xray) [Sarina]
+
+* Typo in dns.json.j2. [Sarina]
+
+* Comment with "//" instead of "#" [Sarina]
+
+* Missed path. [Sarina]
+
+* 02_dns.json.j2 typo (xray) [Sarina]
+
+* 02_dns.json.j2 typo. [Sarina]
+
+* Vless_grpc_new.json.template. [Sarina]
+
+* Common/jinja.py bug. [Sarina]
+
+* Bug(typo) (often occurred in jinja loops) [Sarina]
+
+* Haproxy bug. [hiddify]
+
+* Xray won't restart after a problem. [hiddify]
+
+* Not installed pymysql. [hiddify]
+
+* Tpyo. [hiddify]
+
+* Hysteria password. [hiddify]
+
+* Bug. [hiddify]
+
+* Missing dependencies. [hiddify]
+
+* Bug. [hiddify]
+
+* Quit. [hiddify]
+
+* Firewall bugs. [hiddify]
+
+* Install old version. [hiddify]
+
+* Bug. [hiddify]
+
+* Bug in update release version. [hiddify]
+
+* Version. [hiddify]
+
+* Downgrade. [hiddify]
+
+* Ansii issue. [hiddify]
+
+* Bug. [hiddify]
+
+* Db. [hiddify]
+
+* Install mysql. [hiddify]
+
+* Bug. [hiddify]
+
+* Remove remote. [hiddify]
+
+### Other
+
+* Merge branch 'main' of github.com:hiddify/Hiddify-Manager. [hiddify-com]
+
+* Merge pull request #3720 from Iam54r1n4/dev-patch25. [Hiddify]
+
+  Fix nginx 403 response (upload backup)
+
+* Set package mode after installation. [hiddify-com]
+
+* Disable download youtube. [hiddify-com]
+
+* Fix. [hiddify-com]
+
+* Update. [hiddify-com]
+
+* Add version to paramers. [hiddify-com]
+
+* New add version var. [hiddify-com]
+
+* Depracted old release method. [hiddify-com]
+
+* Update README.md. [Hiddify]
+
+* Update displaying install situation. [hiddify-com]
+
+* Add more secutiry. [hiddify-com]
+
+* Merge pull request #3642 from miladtavakoli/main. [Hiddify]
+
+  Add ookla-speedtest  Warp
+
+* Update 03_routing.json.j2. [Milad Tavakoli]
+
+  Add "ookla-speedtest" to warp outbound
+
+* Add jq to the installation. [hiddify-com]
+
+* Merge pull request #3630 from Iam54r1n4/fix-pip. [Hiddify]
+
+  Fix installing mysqlclient==2.2.1 with pip(upgrade pip)
+
+* Make apply config quicker. [hiddify-com]
+
+* Merge pull request #3618 from Iam54r1n4/wg-usage-command. [Hiddify]
+
+  add: wireguard update usage command
+
+* Add: wireguard update usage command. [Sarina]
+
+* Merge pull request #3616 from Iam54r1n4/fix-doh2. [Hiddify]
+
+  fix: doh (google dns)
+
+* Merge branch 'main' of github.com:hiddify/Hiddify-Manager. [hiddify-com]
+
+* Merge pull request #3613 from Iam54r1n4/fix-doh. [Hiddify]
+
+  Fix doh
+
+* Update common.conf.j2. [Hiddify]
+
+* Remove depracted options. [hiddify-com]
+
+* Remove old shadowtls and use singbox shadowtls. [hiddify-com]
+
+* Reload haproxy after getting certs. [hiddify-com]
+
+* Use let's encrypt first and zerossl as fallback. [hiddify-com]
+
+* Remove old files before applying variables. [hiddify-com]
+
+* Speedup installing multiple packages. [hiddify-com]
+
+* Merge pull request #3611 from Iam54r1n4/fix-mtproxy. [Hiddify]
+
+  fix: erlang
+
+* Remove unneccasry check. [hiddify]
+
+* Merge pull request #3583 from Iam54r1n4/fix-mtproxy. [Hiddify]
+
+  fix: mtprotoproxy library
+
+* Update mtg.toml.j2. [Hiddify]
+
+* Del: telegram secret fn. [Sarina]
+
+* Del: to_hex. [Sarina]
+
+* Merge branch 'main' into fix-mtproxy. [I'm Sarina Esmailzadeh Too]
+
+* Fix bugs. [hiddify-com]
+
+* Update req. [hiddify]
+
+* Merge branch 'main' of github.com:hiddify/Hiddify-Server. [hiddify]
+
+* Merge pull request #3548 from Iam54r1n4/singbox-mux. [Hiddify]
+
+  Add mux object to singbox server side config
+
+* Refactor: multiplex config rendering. [Sarina]
+
+* Merge branch 'singbox-mux' of github.com:Iam54r1n4/Hiddify-Server into singbox-mux. [Sarina]
+
+* Add: singbox multiplex jinja file. [Sarina]
+
+* Merge branch 'singbox-mux' of github.com:Iam54r1n4/Hiddify-Server into HEAD. [Sarina]
+
+* Add: multiplex object to singbox configs. [Sarina]
+
+* Merge pull request #3555 from Iam54r1n4/bug-fix. [Hiddify]
+
+  Fix netplan dir bug
+
+* Merge pull request #3569 from Iam54r1n4/fix-wireguard. [Hiddify]
+
+  Fix wireguard typo
+
+* Force link in ansi. [hiddify]
+
+* Force https. [hiddify]
+
+* Remove flask_babelex. [hiddify]
+
+* Speed up restarting panel. [hiddify]
+
+* Better verify warp. [hiddify]
+
+* Disable anssi modes after setup. [hiddify]
+
+* Restart haproxy and nginx on install. [hiddify]
+
+* Simpler install. [hiddify]
+
+* Update installer. [hiddify]
+
+* Force release via old script. [hiddify]
+
+* Possible fix. [hiddify]
+
+* Update. [hiddify]
+
+* Update cli_progress. [hiddify]
+
+* Update. [hiddify]
+
+* Better logs. [hiddify]
+
+* Update. [hiddify]
+
+* Update. [hiddify]
+
+* Update. [hiddify]
+
+* Better log in update. [hiddify]
+
+* Make unzip quite. [hiddify]
+
+* Update cli_progress. [hiddify]
+
+* Silent get. [hiddify]
+
+* Update log. [hiddify]
+
+* Update progress. [hiddify]
+
+* Better handle install logs. [hiddify]
+
+* Fewer logs. [hiddify]
+
+* Add subtitle. [hiddify]
+
+* Add Title. [hiddify]
+
+* Update: progress and installation. [hiddify]
+
+* Merge branch 'main' of github.com:hiddify/Hiddify-Server. [hiddify]
+
+* Merge pull request #3523 from Iam54r1n4/hysteria2. [Hiddify]
+
+* Update. [hiddify]
+
+* Merge pull request #3519 from Iam54r1n4/hysteria2. [Hiddify]
+
+  Make hysteria server side config dynamically from DB
+
+* Better version management. [hiddify]
+
+* Improve acme.sh. [hiddify]
+
+* Optimizing cert. [hiddify]
+
+* Update. [hiddify]
+
+* Speedup acme.sh. [hiddify]
+
+* Install xray to subfolder. [hiddify]
+
+* Update xray to 1.8.7 and singbox to 1.7.8. [hiddify]
+
+* Update. [hiddify]
+
+* Better manage panel link. [hiddify]
+
+* Merge pull request #3489 from Iam54r1n4/main. [Hiddify]
+
+  fix: common.conf.j2
+
+* Merge pull request #3457 from YaoSiQian/main. [Hiddify]
+
+  Update README_cn.md
+
+* Update README_cn.md. [YaoSiQian]
+
+* Merge pull request #3488 from Iam54r1n4/main. [Hiddify]
+
+  add: new proxy path to nginx
+
+* Update common.conf.j2. [Hiddify]
+
+* Add: new proxy path to nginx. [Sarina]
+
+* Update README_ru.md. [lymanjre]
+
+* Update README_cn.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README_cn.md. [lymanjre]
+
+* Update README_ru.md. [lymanjre]
+
+* Update README_cn.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README_ru.md. [lymanjre]
+
+* Update README_ru.md. [lymanjre]
+
+* Update README_cn.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Merge pull request #3449 from Iam54r1n4/commander. [Hiddify]
+
+  Adding hiddify-manager/common/commander.py
+
+* Merge branch 'hiddify:main' into commander. [I'm Sarina Esmailzadeh Too]
+
+* Update README.md. [lymanjre]
+
+* Update LICENSE.md. [lymanjre]
+
+* Rename LICENSE to LICENSE.md. [lymanjre]
+
+* Update LICENSE. [lymanjre]
+
+* Update LICENSE. [lymanjre]
+
+* Update LICENSE. [lymanjre]
+
+* Refactor: using assert instead of raise. [Sarina]
+
+* Refactor: commander.py. [Sarina]
+
+* Add: unit test for commander validators. [Sarina]
+
+* Add: apply-users command (quick apply) & "--no-gui" flag. [Sarina]
+
+* Add: command.py to sudoers. [Sarina]
+
+* Add: shebang to scripts. [Sarina]
+
+* Add: get-cert and update-usage commands. [Sarina]
+
+* Del: is_valid_string function. [Sarina]
+
+* Add: executable flag to commander.py. [Sarina]
+
+* Refactor. [Sarina]
+
+* Add: temporary-access command to commander.py. [Sarina]
+
+* Add: shebang to commander.py. [Sarina]
+
+* Merge branch 'hiddify:main' into commander. [I'm Sarina Esmailzadeh Too]
+
+* Merge pull request #3436 from Hiiirad/patch-2. [Hiddify]
+
+  Update install.sh
+
+* Update install.sh. [Hirad Rasoolinejad]
+
+  Alphabetically ordered and removed duplicate packages
+
+* Update menu.sh. [lymanjre]
+
+* Update menu.sh. [lymanjre]
+
+* Even more refactor. [Sarina]
+
+* Refactor and sanitized input and implement run commnad. [Sarina]
+
+* Add: prototype of commander.py. [Sarina]
+
+* Update README_cn.md. [lymanjre]
+
+* Update README_ru.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update. [hiddify]
+
+* Update README.md. [lymanjre]
+
+* Merge pull request #3432 from alirezarm78/main. [Hiddify]
+
+  Fix conflicts between resolvconf and systemd-resolved
+
+* Fix conflicts between resolvconf and systemd-resolved. [Alireza Rahmani]
+
+* Merge pull request #3428 from Hiiirad/patch-1. [Hiddify]
+
+  Reformatted and lint jinja.py
+
+* Reformatted and lint jinja.py. [Hirad Rasoolinejad]
+
+* Update README_cn.md. [lymanjre]
+
+* Update README_ru.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README_ru.md. [lymanjre]
+
+* Update README_cn.md. [lymanjre]
+
+* Update README_ru.md. [lymanjre]
+
+* Update README_cn.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Merge pull request #3410 from leic4u/patch-3. [lymanjre]
+
+  Update README.md
+
+* Update README.md. [leic4u]
+
+  fix some mistake
+
+* Merge pull request #3409 from leic4u/patch-2. [lymanjre]
+
+  Update README_cn.md
+
+* Update README_cn.md. [leic4u]
+
+  improve localized chinese language
+  /en 改进本地化的中文翻译
+
+* Update change_ip.sh. [lymanjre]
+
+  Change directory to the location of WARP files
+
+* Update change_ip.sh. [lymanjre]
+
+  Change directory to the location of WARP files
+
+* Update README_cn.md. [lymanjre]
+
+* Update README_ru.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README_ru.md. [lymanjre]
+
+* Update README_cn.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* When zerotls fail retry from letsencrypt. [hiddify]
+
+* Better manage of upgrade. [hiddify]
+
+* Add lock. [hiddify]
+
+* Merge pull request #3354 from sigseg5/main. [Hiddify]
+
+  Update translation in README_ru.md file
+
+* Update translation in README_ru.md file. [sigseg5]
+
+* Disable linux upgrade. [hiddify]
+
+* Remove duplicate. [hiddify]
+
+* Better cert. [hiddify]
+
+* Better color. [hiddify]
+
+* Fix download. [hiddify]
+
+* Update download. [hiddify]
+
+* Add direct download of beta version. [hiddify]
+
+* Only zero ssl. [hiddify]
+
+* Better cert management. [hiddify]
+
+* Reload only. [hiddify]
+
+* Fix orders. [hiddify]
+
+* Speedup apply users. [hiddify]
+
+* Update speed. [hiddify]
+
+* Always register zerossl account. [hiddify]
+
+* Better Progress. [hiddify]
+
+* Update README.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Merge pull request #3335 from Iam54r1n4/ssh-warning. [Hiddify]
+
+  Ssh warning
+
+* Merge branch 'hiddify:main' into ssh-warning. [I'm Sarina Esmailzadeh Too]
+
+* Feature: show warning if PasswordAuthentication is enable in ssh server. [Sarina]
+
+* Merge pull request #3344 from leic4u/main. [Hiddify]
+
+  Update README_cn.md
+
+* Update README_cn.md. [leic4u]
+
+* Update. [hiddify]
+
+* Fix new install. [hiddify]
+
+* Update. [hiddify]
+
+* Remove old replace. [hiddify]
+
+* Reload haproxy after getting cert. [hiddify]
+
+* Update name. [hiddify]
+
+* Update panel to use hiddify manager. [hiddify]
+
+* Change name to hiddify-manager. [hiddify]
+
+* Add more options. [hiddify]
+
+* Update. [hiddify]
+
+* Add debugger. [hiddify]
+
+* Add auto reload to panel. [hiddify]
+
+* Remove redundent build. [hiddify]
+
+* Use app.cfg from deployed panel. [hiddify]
+
+* Update panel. [hiddify]
+
+* Update. [hiddify]
+
+* Add build and debug config for vscode. [hiddify]
+
+* Remove all old .template files. [hiddify]
+
+* Merge pull request #3325 from hiddify/dependabot/submodules/hiddify-panel/src-be4b12e. [Hiddify]
+
+  build(deps): bump hiddify-panel/src from `b2b3cf4` to `be4b12e`
+
+* Build(deps): bump hiddify-panel/src from `b2b3cf4` to `be4b12e` [dependabot[bot]]
+
+  Bumps [hiddify-panel/src](https://github.com/hiddify/Hiddify-Panel) from `b2b3cf4` to `be4b12e`.
+  - [Release notes](https://github.com/hiddify/Hiddify-Panel/releases)
+  - [Commits](https://github.com/hiddify/Hiddify-Panel/compare/b2b3cf44d3c2fd309265d9b2e67ddd59f2566040...be4b12e4d18776796e9b1516582d66b2593dbfa6)
+
+  ---
+  updated-dependencies:
+  - dependency-name: hiddify-panel/src
+    dependency-type: direct:production
+  ...
+
+* Merge pull request #3326 from leic4u/patch-1. [Hiddify]
+
+  Update README_cn.md
+
+* Merge branch 'main' into patch-1. [Hiddify]
+
+* Merge pull request #3316 from Iam54r1n4/other-nginx-jinja. [Hiddify]
+
+  convert other and nginx templates to jinja files
+
+* Merge branch 'hiddify:main' into other-nginx-jinja. [I'm Sarina Esmailzadeh Too]
+
+* Add: convert other/ templates to jinja files. [Sarina]
+
+* Merge branch 'hiddify:main' into nginx-jinja. [I'm Sarina Esmailzadeh Too]
+
+* Add: convert nginx/parts templates to jinja files. [Sarina]
+
+* Add: convert nginx/conf.d templates to jinja files. [Sarina]
+
+* Delete docs/Russian_Flag.png. [lymanjre]
+
+* Update README_cn.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README_ru.md. [lymanjre]
+
+* Update README_ru.md. [lymanjre]
+
+* Update README_cn.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README_fa.md. [lymanjre]
+
+* Create README_ru.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README_cn.md. [lymanjre]
+
+* Add Russian flag. [lymanjre]
+
+* Update README_cn.md. [leic4u]
+
+  Fix some unreasonable Chinese translations.
+
+* Update README.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Update README.md. [lymanjre]
+
+* Merge branch 'main' of github.com:hiddify/hiddify-config. [hiddify]
+
+* Force python3.10 to be installed. [hiddify]
+
+* Remove old cfg files. [hiddify]
+
+* Remove all template files. [hiddify]
+
+* Convert haproxy, singbox and xray reality to jinja2. [hiddify]
+
+* Certs only for ssl domains. [hiddify]
+
+* Install only if needed. [hiddify]
+
+* Update jinja xray. [hiddify]
+
+* Update. [hiddify]
+
+* Fix pip. [hiddify]
+
+* Merge pull request #3285 from Iam54r1n4/singbox-xray-jinja. [Hiddify]
+
+  Using Jinja instead of Sed for making configs
+
+* Merge branch 'hiddify:main' into singbox-xray-jinja. [I'm Sarina Esmailzadeh Too]
+
+* Update README.md. [lymanjre]
+
+* Update python to 3.10. [hiddify]
+
+* This file had wrong name (had typo) [Sarina]
+
+* Delete unwanted .template files. [Sarina]
+
+* Modify: remove trailing comma and comments from json file after rendered with jinja (common/jinja.py) [Sarina]
+
+* Modified: kcp_main.json.j2 (xray) [Sarina]
+
+* Modified: http_main.json.j2 (xray) [Sarina]
+
+* Add: tuic.json.j2 (incomplete jinja) [Sarina]
+
+* Add: hysteria.json.j2 (incomplete jinja) [Sarina]
+
+* Modified: better .j2 formatting (singbox) [Sarina]
+
+* Add: xtls_main.json.j2 (xray) [Sarina]
+
+* Add: quic_main.json.j2 (xray) [Sarina]
+
+* Add: dispatcher_h2.json.j2 (xray) [Sarina]
+
+* Add: dispatcher.json.j2 (xray) [Sarina]
+
+* Add: ss4plugin.json.j2 (xray) [Sarina]
+
+* Add: h2_vmess_ws_proxy.json.j2 (xray) [Sarina]
+
+* Add: h2_vmess_ws_new.json.j2 (xray) [Sarina]
+
+* Add: h2_vmess_proxy.json.j2 (xray) [Sarina]
+
+* Add: h2_vmess_proxy.json.j2 (xray) [Sarina]
+
+* Add: h2_vmess_grpc_proxy.json.j2 (xray) [Sarina]
+
+* Add: h2_vmess_grpc_new.json.j2 (xray) [Sarina]
+
+* Add: h2_vless_ws_proxy.json.j2 (xray) [Sarina]
+
+* Add: h2_vless_ws_new.json.j2 (xray) [Sarina]
+
+* Add: h2_vless_proxy.json.j2 (xray) [Sarina]
+
+* Add: h2_vless_new.json.j2 (xray) [Sarina]
+
+* Add: h2_vless_grpc_proxy.json.j2 (xray) [Sarina]
+
+* Add: h2_vless_grpc_new.json.j2 (xray) [Sarina]
+
+* Add: h2_trojan_ws_proxy.json.j2 (xray) [Sarina]
+
+* Add: h2_trojan_ws_new.json.j2 (xray) [Sarina]
+
+* Add: h2_trojan_proxy.json.j2 (xray) [Sarina]
+
+* Add: h2_trojan_new.json.j2 (xray) [Sarina]
+
+* Add: trojan_grpc_proxy.json.j2 (xray) [Sarina]
+
+* Add: h2_trojan_grpc_new.json.j2 (xray) [Sarina]
+
+* Add: h2_ss_ws_proxy.json.j2 (xray) [Sarina]
+
+* Add: h2_ss_ws_new.json.j2 (xray) [Sarina]
+
+* Add: h2_ss_proxy.json.j2 (xray) [Sarina]
+
+* Add: h2_ss_grpc_proxy.json.j2 (xray) [Sarina]
+
+* Add: h2_ss_new.json.j2 (xray) & fix: h2_ss_grpc_new.json.j2 bug (xray) [Sarina]
+
+* Add: h2_ss_grpc_new.json.j2 (xray) [Sarina]
+
+* Add: vmess_ws_new.json.j2 (xray) [Sarina]
+
+* Add: vmess_new.json.j (xray) [Sarina]
+
+* Add: vless_ws_new.json (xray) [Sarina]
+
+* Add: vless_new.json.j2 (xray) [Sarina]
+
+* Add: trojan_ws_new.json.j2 (xray) [Sarina]
+
+* Add: trojan_new.json.j2 (xray) [Sarina]
+
+* Add: ss_ws_new.json.j2 (xray) & edit: ss_new.json.j2 typo. [Sarina]
+
+* Add: ss_new.json.j2 (xray) [Sarina]
+
+* Add: kcp_main.json.j2 (xray) [Sarina]
+
+* Add : http_main.json.j2 (xray) [Sarina]
+
+* Add: 02_dns.json.j2 (xray) [Sarina]
+
+* Add: vless_grpc_new.json.j2. [Sarina]
+
+* Add: check the new files to see what i added. [Sarina]
+
+* Add: vless_ws_new.json.j2. [Sarina]
+
+* Add: vless_new.json.j2. [Sarina]
+
+* Add: trojan_grpc_new.json.j2. [Sarina]
+
+* Add: trojan_ws_new.json.j2. [Sarina]
+
+* Add: ss_ws_new.json.j2. [Sarina]
+
+* Add : 10_ss_new.json.j2. [Sarina]
+
+* Add: jinja 02_dns.json.j2. [Sarina]
+
+* Add idea for haproxy multifile jinja. [hiddify]
+
+* Add: trojan jinja. [hiddify]
+
+* Add jinja routing. [hiddify]
+
+* Add j2 template. [hiddify]
+
+* Add vless install. [hiddify]
+
+* Add back button. [hiddify]
+
+* Reset terminal after installation. [hiddify]
+
+* Allow fake domains for hysteria and tuic. [hiddify]
+
+* Update version. [hiddify]
+
+* Update. [hiddify]
+
+* If the domain doesn't have cert skip. [hiddify]
+
+* Listen to ipv4. [hiddify]
+
+* Update. [hiddify]
+
+* Fix. [hiddify]
+
+* Update. [hiddify]
+
+* Add hystria tuic. [hiddify]
+
+* Fix. [hiddify]
+
+* Better update message. [hiddify]
+
+* Update. [hiddify]
+
+* Better versioning. [hiddify]
+
+* Quciker installation, merge installation and apply configs. [hiddify]
+
+* Store package mode in the database. [hiddify]
+
+* Add both hiddify-config and hiddify-server zip file. [hiddify]
+
+* Change hiddify-config to hiddify-server in bashrc. [hiddify]
+
+* Create an alternative for hiddify-config and hiddify-server. [hiddify]
+
+* Change name to hiddify-server. [hiddify]
+
+* Create dev version. [hiddify]
+
+* Merge branch 'before_db_change' [hiddify]
+
+* Update menu. [hiddify]
+
+* Fix bug. [hiddify]
+
+* Better output. [hiddify]
+
+* Faster develop update. [hiddify]
+
+* Update. [hiddify]
+
+* Update. [hiddify]
+
+* Update. [hiddify]
+
+* Fix append update log. [hiddify]
+
+* Fix api limit github. [hiddify]
+
+* Update. [hiddify]
+
+* Fix dev version. [hiddify]
+
+* Better ui. [hiddify]
+
+* Improve codes. [hiddify]
+
+* Refactor update to three channel: dev/beta/release. [hiddify]
+
+* Merge branch 'main' of github.com:hiddify/hiddify-config. [hiddify]
+
+* Update README_fa.md. [Hiddify]
+
+* Update README.md. [Hiddify]
+
+* Merge pull request #3238 from alix1383/main. [Hiddify]
+
+  Update 03_routing.json.template
+
+* Update 03_routing.json.template. [Alix]
+
+* Add no-gui updater. [hiddify]
+
+* Merge branch 'before_db_change' [hiddify]
+
+* Make mysql listen to localhost only. [hiddify]
+
+* Merge branch 'before_db_change' [hiddify]
+
+* Move resources from panel. [hiddify]
+
+* Fux pymysql. [hiddify]
+
+* Force update user mysql. [hiddify]
+
+* Remove old database after upgrade. [hiddify]
+
+* Change backend to mysql. [hiddify]
+
+
+## v10.5.72 (2024-01-28)
+
+### Fix
+
+* Name issue in apply config. [hiddify-com]
+
+
+## v10.5.71 (2024-01-25)
+
+### Other
+
+* Fix change ip. [hiddify]
+
+
+## v10.5.69 (2024-01-25)
+
+### Other
+
+* Disable tui in install. [hiddify]
+
+* Speedup restarting panel. [hiddify]
+
+
+## v10.5.68 (2024-01-25)
+
+### Changes
+
+* Double test warp connectivity. [hiddify]
+
+
+## v10.5.67 (2024-01-25)
+
+### Other
+
+* Update install.sh. [hiddify]
+
+
+## v10.5.66 (2024-01-25)
+
+### Other
+
+* Disbale ansii mode after exit. [hiddify]
+
+
+## v10.5.65 (2024-01-24)
+
+### Fix
+
+* Menu. [hiddify]
+
+
+## v10.5.64 (2024-01-24)
+
+### Other
+
+* Update. [hiddify]
+
+
+## v10.5.63 (2024-01-24)
+
+### Fix
+
+* Release update. [hiddify]
+
+### Other
+
+* Fix update bug. [hiddify]
+
+
+## v10.5.62 (2024-01-24)
+
+### Other
+
+* New add: progress bar. [hiddify]
+
+
+## v10.5.61 (2024-01-22)
+
+### Fix
+
+* Cert bug. [hiddify]
+
+
+## v10.5.60 (2024-01-22)
+
+### Fix
+
+* Downgrade issue. [hiddify]
+
+
+## v10.5.59 (2024-01-22)
+
+### Fix
+
+* Update bug. [hiddify]
+
+
+## v10.5.58 (2024-01-22)
+
+### Fix
+
+* Bug. [hiddify]
+
+
+## v10.5.57 (2024-01-22)
+
+### Fix
+
+* Folder bug. [hiddify]
+
+
+## v10.5.56 (2024-01-22)
+
+### Other
+
+* Update update. [hiddify]
+
+
+## v10.5.55 (2024-01-21)
+
+### Fix
+
+* Forbidden sites. [hiddify]
+
+### Other
+
+* Update updater. [hiddify]
+
+
+## v10.5.54 (2024-01-10)
+
+### Fix
+
+* Bug in installing old version of panel. [hiddify]
+
+
+## v10.5.53 (2024-01-10)
+
+### Fix
+
+* Update cert. [hiddify]
+
+
+## v10.5.52 (2024-01-10)
+
+### Other
+
+* Update acme.sh. [hiddify]
+
+
+## v10.5.51 (2024-01-10)
+
+### Fix
+
+* Bug in version. [hiddify]
+
+### Other
+
+* Update release version gathering. [hiddify]
+
+
+## v10.5.50 (2023-11-27)
+
+### Fix
+
+* Dns resolved. [hiddify]
+
+
+## v10.5.47 (2023-10-26)
+
+### Fix
+
+* Bug. [hiddify]
+
+
+## v10.5.46 (2023-10-26)
+
+### Fix
+
+* Path. [hiddify]
+
+
+## v10.5.45 (2023-10-25)
+
+### Fix
+
+* Release update. [hiddify]
+
+
+## v10.5.44 (2023-10-25)
+
+### Fix
+
+* Release update. [hiddify]
+
+
+## v10.5.43 (2023-10-23)
+
+### Fix
+
+* Cert issue. [hiddify]
+
+
+## v10.5.42 (2023-10-23)
+
+### Fix
+
+* Download beta issue. [hiddify]
+
+* Name issue. [hiddify]
+
+### Other
+
+* Fix. [hiddify]
+
+
+## v10.5.41 (2023-10-19)
+
+### Fix
+
+* App cfg. [hiddify]
+
+
+## v10.5.40 (2023-09-27)
+
+### Fix
+
+* Haproxy. [hiddify]
+
+
+## v10.5.39 (2023-09-27)
+
+### Fix
+
+* Xray stopped. [hiddify]
+
+
+## v10.5.38 (2023-09-15)
+
+### Fix
+
+* Dependency installation for next version. [hiddify]
+
+
+## v10.5.37 (2023-09-13)
+
+### Fix
+
+* Beta upgrade from menu. [hiddify]
+
+### Other
+
+* Store package mode. [hiddify]
+
+* Store package mode change. [hiddify]
+
+
+## v10.5.36 (2023-09-13)
+
+### Fix
+
+* Downgrade xray bug. [hiddify]
+
+
+## v10.5.35 (2023-09-13)
+
+### Other
+
+* Add beta to the menu. [hiddify]
+
+
+## v10.5.34 (2023-09-13)
+
+### Other
+
+* Fix. [hiddify]
+
+
+## v10.5.33 (2023-09-13)
+
+### Other
+
+* Fix. [hiddify]
+
+
+## v10.5.32 (2023-09-13)
+
+### Other
+
+* Fix indent. [hiddify]
+
+
+## v10.5.31 (2023-09-13)
+
+### Other
+
+* Fix. [hiddify]
+
+* Add both hiddify-server and hiddify-config. [hiddify]
+
+
+## v10.5.30 (2023-09-13)
+
+### Other
+
+* Temp disable changelog. [hiddify]
+
+
+## v10.5.29 (2023-09-13)
+
+### Other
+
+* Change name of hiddify-config to hiddify-server. [hiddify]
+
+
+## v10.5.28 (2023-09-13)
+
+### Other
+
+* Update to make it possible beta version. [hiddify]
+
+
+## v10.5.27 (2023-09-12)
+
+### Fix
+
+* Downgrade in release version. [hiddify]
+
+### Other
+
+* Update. [hiddify]
+
+* Better downgrade. [hiddify]
+
+* Add easy downgrade to release from develop. [hiddify]
+
+
+## v10.5.26 (2023-09-12)
+
+### Fix
+
+* Realityh2. [hiddify]
+
+
+## v10.5.25 (2023-09-12)
+
+### Fix
+
+* Bug in reality h2. [hiddify]
+
+
+## v10.5.24 (2023-09-12)
+
+### Other
+
+* Remove reality h2. [hiddify]
+
+
+## v10.5.23 (2023-09-12)
+
+### Fix
+
+* Bug. [hiddify]
+
+
+## v10.5.22 (2023-09-12)
+
+### Fix
+
+* Bug in reality h2. [hiddify]
+
+
+## v10.5.21 (2023-09-12)
+
+### New
+
+* Add reality h2. [hiddify]
+
+
+## v10.5.20 (2023-09-09)
+
+### Fix
+
+* Bug. [hiddify]
+
+
+## v10.5.19 (2023-09-09)
+
+### Other
+
+* Change acme.sh mode. [hiddify]
+
+
+## v10.5.18 (2023-09-09)
+
+### Fix
+
+* Not showing admin link. [hiddify]
+
+
+## v10.5.17 (2023-09-09)
+
+### Other
+
+* Change host to local for acme. [hiddify]
+
+
+## v10.5.16 (2023-09-09)
+
+### Fix
+
+* Multiple menu exit need. [hiddify]
+
+### Other
+
+* Speed up cert. [hiddify]
+
+
+## v10.5.15 (2023-09-08)
+
+### Fix
+
+* Disconnection after user add. [hiddify]
+
+
+## v10.5.14 (2023-09-06)
+
+### Fix
+
+* Buffer size. [hiddify]
+
+### Other
+
+* Remove port 88 and 443 from listening of xray. [hiddify]
+
+* Restart redis on update. [hiddify]
+
+
+## v10.5.13 (2023-09-04)
+
+### Other
+
+* Remove all listens to 0.0.0.0 except for ssh and haproxy. [hiddify]
+
+
+## v10.5.12 (2023-09-02)
+
+### Fix
+
+* Bug. [hiddify]
+
+
+## v10.5.11 (2023-09-02)
+
+### Other
+
+* Disable ipv6 firewall temporary. [hiddify]
+
+
+## v10.5.10 (2023-09-02)
+
+### Fix
+
+* Version from github. [hiddify]
+
+
+## v10.5.9 (2023-09-02)
+
+### Other
+
+* Remove duplicate entries. [hiddify]
+
+
+## v10.5.8 (2023-09-02)
+
+### New
+
+* Add dns if failed everytime. [hiddify]
+
+### Fix
+
+* Ipv6 rules. [hiddify]
+
+
+## v10.5.7 (2023-08-31)
+
+### Other
+
+* Disable install dialog. [hiddify]
+
+
+## v10.5.6 (2023-08-31)
+
+### Fix
+
+* Nginx typo. [hiddify]
+
+
+## v10.5.5 (2023-08-31)
+
+### Other
+
+* Speed up static file serving. [hiddify]
+
+
+## v10.5.4 (2023-08-30)
+
+### Other
+
+* Fix status bug. [hiddify]
+
+
+## v10.5.3 (2023-08-30)
+
+### Other
+
+* Speed up menu. [hiddify]
+
+
+## v10.5.2 (2023-08-30)
+
+### Fix
+
+* Bug. [hiddify]
+
+
+## v10.5.1 (2023-08-30)
+
+### Other
+
+* Better ui. [hiddify]
+
+
+## v10.5.0 (2023-08-30)
+
+### Other
+
+* Use scraping to avoid api limit. [hiddify]
+
+
+## v10.4.9 (2023-08-30)
+
+### Other
+
+* Add remote version only if needed. [hiddify]
+
+
+## v10.4.8 (2023-08-30)
+
+### Other
+
+* Add package mode. [hiddify]
+
+
+## v10.4.7 (2023-08-30)
+
+### Other
+
+* Better ui. [hiddify]
+
+
+## v10.4.6 (2023-08-30)
+
+### Fix
+
+* Panel version. [hiddify]
+
+### Other
+
+* Bettter dispkay. [hiddify]
+
+
+## v10.4.5 (2023-08-30)
+
+### New
+
+* Add update available in menu. [hiddify]
+
+
+## v10.4.4 (2023-08-30)
+
+### Other
+
+* Update downgrade. [hiddify]
+
+
+## v10.4.3 (2023-08-30)
+
+### Other
+
+* Fix shortlink bug. [hiddify]
+
+
+## v10.4.2 (2023-08-30)
+
+### Fix
+
+* No commit message. [hiddify]
+
+* No commit message. [hiddify]
+
+
+## v10.4.1 (2023-08-30)
+
+### Other
+
+* Add more menu option. [hiddify]
+
+
+## v10.4.0 (2023-08-29)
+
+### Other
+
+* Speed up only sub links by bypassing unneccasry checks. [hiddify]
+
+
+## v10.3.9 (2023-08-29)
+
+### New
+
+* Add quick panel link. [hiddify]
+
+
+## v10.3.8 (2023-08-29)
+
+### Fix
+
+* Menu. [hiddify]
+
+
+## v10.3.7 (2023-08-29)
+
+### Other
+
+* Fix update issue. [hiddify]
+
+
+## v10.3.6 (2023-08-29)
+
+### Fix
+
+* Tpum. [hiddify]
+
+
+## v10.3.5 (2023-08-29)
+
+### Fix
+
+* Tput: unknown terminal "unknown" [hiddify]
+
+
+## v10.3.4 (2023-08-29)
+
+### Other
+
+* Forcing warp installation for all. [hiddify]
+
+
+## v10.3.3 (2023-08-29)
+
+### Fix
+
+* Wrap open local. [hiddify]
+
+
+## v10.3.2 (2023-08-29)
+
+### Fix
+
+* Socks. [hiddify]
+
+
+## v10.3.1 (2023-08-29)
+
+### Fix
+
+* Ssh wrap. [hiddify]
+
+
+## v10.3.0 (2023-08-29)
+
+### Fix
+
+* Panel present. [hiddify]
+
+
+## v10.2.9 (2023-08-29)
+
+### Other
+
+* Update apply configs mode. [hiddify]
+
+
+## v10.2.8 (2023-08-29)
+
+### Other
+
+* Fixbug. [hiddify]
+
+
+## v10.2.7 (2023-08-29)
+
+### Fix
+
+* Wireguard dns issue. [hiddify]
+
+* Bug. [hiddify]
+
+### Other
+
+* Better ui. [hiddify]
+
+
+## v10.2.6 (2023-08-29)
+
+### New
+
+* Add log in dialog. [hiddify]
+
+
+## v10.2.5 (2023-08-29)
+
+### Other
+
+* 2fix: resolve. [hiddify]
+
+
+## v10.2.4 (2023-08-29)
+
+### Fix
+
+* Dns. [hiddify]
+
+
+## v10.2.3 (2023-08-29)
+
+### Other
+
+* Update xray core to 1.8.4. [hiddify]
+
+
+## v10.2.2 (2023-08-29)
+
+### Other
+
+* Fix. [hiddify]
+
+
+## v10.2.1 (2023-08-29)
+
+### Fix
+
+* Typo. [hiddify]
+
+
+## v10.2.0 (2023-08-29)
+
+### New
+
+* Add progress bar for installation. [hiddify]
+
+* Add short link support. [hiddify]
+
+* Add alias for hiddify. [hiddify]
+
+  you can now open menu by typing hiddify
+
+* Add whitelist port. [hiddify]
+
+* Update xray to v1.8.3. [hiddify]
+
+* Add redis. [hiddify]
+
+* Change warp to wireguard in kernel space. should speed up the warp. [hiddify]
+
+* Enable or disable firewall for ssh-server. [hiddify]
+
+* Add ssh-server port in firewall. [hiddify]
+
+* Move shadowtls configs to file. [hiddify]
+
+* Completely disable warp when is disabled. [hiddify]
+
+* Add ssh liberty bridge. [hiddify]
+
+* Add redis. [hiddify]
+
+### Changes
+
+* Better resource download. [hiddify]
+
+* Change rdb path. [hiddify]
+
+* Add enable ssh server. [hiddify]
+
+* Update ssh liberty server. [hiddify]
+
+### Fix
+
+* Download install. [hiddify]
+
+* Update issue. [hiddify]
+
+* Warp issue singbox. [hiddify]
+
+* Ipv6. [hiddify]
+
+* Bug. [hiddify]
+
+* Github download. [hiddify]
+
+* Typo. [hiddify]
+
+* Warp now works in ipv4 vps. [hiddify]
+
+* Nginx error on dns fail. [hiddify]
+
+* Only ipv4. [hiddify]
+
+* Bug. [hiddify]
+
+* Bug in ubuntu 20.04. [hiddify]
+
+* Typo. [hiddify]
+
+* Ssh host keys permission. [hiddify]
+
+* Redis permissions. [hiddify]
+
+* Typo in ssh. [hiddify]
+
+* The permission issue  in redis. [hiddify]
+
+* Template. [hiddify]
+
+* Bug in redis installation. [hiddify]
+
+### Other
+
+* Update haproxy version. [hiddify]
+
+* Block quic in outbound to increase the speed. [hiddify]
+
+* Do not disable ipv6 completely. [hiddify]
+
+* Enable ipv6 always. [hiddify]
+
+* Fix add short link. [hiddify]
+
+* Add warp check status. [hiddify]
+
+* Update wgcf. [hiddify]
+
+* Use db=1 in redis. [hiddify]
+
+* Add ssh liberty service. [hiddify]
+
+* Merge branch 'main' of github.com:hiddify/hiddify-config. [hiddify]
+
+* Merge pull request #3161 from randomguy-on-internet/patch-1. [Hiddify]
+
+  fix typo
+
+* Fix typo. [who knows?]
+
+* Merge pull request #2455 from pobav25227/main. [Hiddify]
+
+  please EXPOSE ing port, be a first command in Dockerfile
+
+* EXPOSE ing port, be a first command in Dockerfile. [pobav25227]
+
+* Update delete_issue.yml. [Hiddify]
+
+* Update delete_issue.yml. [Hiddify]
+
+* Create delete_issue.yml. [Hiddify]
+
+* Update firewall. [hiddify]
+
+
 ## v10.1.3 (2023-06-26)
 
 ### New

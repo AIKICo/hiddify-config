@@ -1,7 +1,7 @@
 
 <div align="left" markdown="1">
 
-[**![Lang_English](https://user-images.githubusercontent.com/125398461/229074810-599bd7f9-0bc1-44a9-b76e-90bf7e182314.png) English**](README.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**![Lang_Chinese](https://user-images.githubusercontent.com/125398461/236453142-16f3a81e-8f40-403d-a452-34c4c9ed8f64.png) 简体中文**](README_cn.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ویکی](https://github.com/hiddify/hiddify-config/wiki/Home_Fa)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[سوالات رایج](https://github.com/hiddify/hiddify-config/discussions/categories/q-a-%D8%B3%D9%88%D8%A7%D9%84%D8%A7%D8%AA-%D8%B1%D8%A7%DB%8C%D8%AC)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[گزارش اشکالات](https://github.com/hiddify/hiddify-config/issues)
+[**🇺🇸 English**](README.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**🇨🇳 简体中文**](README_cn.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**🇷🇺 Русский**](README_ru.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ویکی](https://github.com/hiddify/hiddify-manager/wiki/Home_Fa)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[سوالات رایج](https://github.com/hiddify/hiddify-manager/discussions/categories/q-a-%D8%B3%D9%88%D8%A7%D9%84%D8%A7%D8%AA-%D8%B1%D8%A7%DB%8C%D8%AC)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[گزارش اشکالات](https://github.com/hiddify/hiddify-manager/issues)
 
 
 </div>
@@ -15,18 +15,23 @@
 <br>
 <div align=center markdown="1">
 
+![Hiddify Manager logo](https://github.com/hiddify/Hiddify-Manager/assets/125398461/eeac9916-f57e-4eaf-96dd-f4ea029a8389)
+<!--
 ![Hiddify Logo](https://user-images.githubusercontent.com/125398461/227777845-a4d0f86b-faa2-4f2b-a410-4aa5f68bfe19.png)
+![Hiddify Manager logo](https://github.com/hiddify/Hiddify-Manager/assets/125398461/4831e4ab-fe8a-4741-81e4-472e4ee7351a)
 
+-->
+ 
 </div>
 <br>
 <div align=center>
 
-<!--[![Total Downloads](https://img.shields.io/github/downloads/hiddify/hiddify-config/total?label=downloads%20after%202023%2F03%2F27%2011%3A00%20&style=flat-square)](https://github.com/hiddify/hiddify-config/)-->
-[![Downloads](https://static.pepy.tech/badge/hiddifypanel?style=flat-square&v3)](https://pepy.tech/project/hiddifypanel?display=monthly&versions=2.*&versions=1.*&versions=3.*)[![Last Version](https://img.shields.io/github/release/hiddify/hiddify-config/all.svg?style=flat-square)](https://github.com/hiddify/hiddify-config/)[![Last Release Date](https://img.shields.io/github/release-date/hiddify/hiddify-config.svg?style=flat-square)](https://github.com/hiddify/hiddify-config/)![commits](https://img.shields.io/github/commit-activity/m/hiddify/hiddify-config?style=flat-square)[![Youtube](https://img.shields.io/youtube/channel/views/UCxrmeMvVryNfB4XL35lXQNg?label=Youtube&style=flat-square&logo=youtube)](https://www.youtube.com/@hiddify)[![Telegram Channel](https://img.shields.io/endpoint?label=Channel&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify&color=blue)](https://telegram.dog/hiddify)[![Telegram Group](https://img.shields.io/endpoint?color=neon&label=Support%20Group&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify_board)](https://telegram.dog/hiddify_board)
+<!--[![Total Downloads](https://img.shields.io/github/downloads/hiddify/hiddify-manager/total?label=downloads%20after%202023%2F03%2F27%2011%3A00%20&style=flat-square)](https://github.com/hiddify/hiddify-manager/)-->
+[![Downloads](https://static.pepy.tech/badge/hiddifypanel?style=flat-square&v3)](https://github.com/hiddify/hiddify-manager/releases)[![Last Version](https://img.shields.io/github/release/hiddify/hiddify-manager/all.svg?style=flat-square)](https://github.com/hiddify/hiddify-manager/)[![Last Release Date](https://img.shields.io/github/release-date/hiddify/hiddify-manager.svg?style=flat-square)](https://github.com/hiddify/hiddify-manager/)![commits](https://img.shields.io/github/commit-activity/m/hiddify/hiddify-manager?style=flat-square)[![Youtube](https://img.shields.io/youtube/channel/views/UCxrmeMvVryNfB4XL35lXQNg?label=Youtube&style=flat-square&logo=youtube)](https://www.youtube.com/@hiddify)[![Telegram Channel](https://img.shields.io/endpoint?label=Channel&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify&color=blue)](https://telegram.dog/hiddify)[![Telegram Group](https://img.shields.io/endpoint?color=neon&label=Support%20Group&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify_board)](https://telegram.dog/hiddify_board)
 <!--
-[![GitHub Stars](https://img.shields.io/tokei/lines/github/hiddify/hiddify-config.svg)](https://github.com/hiddify/hiddify-config/)
-[![GitHub Stars](https://img.shields.io/github/stars/hiddify/hiddify-config.svg)](https://github.com/hiddify/hiddify-config/)
-[![GitHub Forks](https://img.shields.io/github/forks/hiddify/hiddify-config.svg)](https://github.com/hiddify/hiddify-config/)
+[![GitHub Stars](https://img.shields.io/tokei/lines/github/hiddify/hiddify-manager.svg)](https://github.com/hiddify/hiddify-manager/)
+[![GitHub Stars](https://img.shields.io/github/stars/hiddify/hiddify-manager.svg)](https://github.com/hiddify/hiddify-manager/)
+[![GitHub Forks](https://img.shields.io/github/forks/hiddify/hiddify-manager.svg)](https://github.com/hiddify/hiddify-manager/)
 -->
 
 
@@ -35,8 +40,8 @@
 
 <div dir="rtl" markdown="1">
 
-## به هیدیفای خوش آمدید
-هیدیفای یک ابزار قدرتمند و حرفه‌ای ضد سانسور اینترنت است که دارای پنل چند کاربره و نصب آسان است و به شما کمک می‌کند با **بیش از ۲۰ پروتکل پشتیبانی شده** شامل **ریالیتی** فیلترینگ اینترنت را دور بزنید همچنین می‌توانید از **پروکسی تلگرام** استفاده نمایید. این ابزار برای شبکه اینترنت **ایران** بهینه سازی شده است و توسط <a href="https://github.com/XTLS/Xray-core#installation" target="_blank">**Xray**</a> توصیه شده است. این پنل یک جایگزین عالی برای پنل X-UI می‌باشد.
+## به هیدیفای‌منیجر خوش آمدید
+هیدیفای‌منیجر یک ابزار قدرتمند و حرفه‌ای ضد سانسور اینترنت است که دارای پنل چند کاربره و نصب آسان است و به شما کمک می‌کند با **بیش از ۲۰ پروتکل پشتیبانی شده** شامل **ریالیتی** فیلترینگ اینترنت را دور بزنید همچنین می‌توانید از **پروکسی تلگرام** استفاده نمایید. این ابزار برای شبکه اینترنت **ایران** بهینه سازی شده است و توسط <a href="https://github.com/XTLS/Xray-core#installation" target="_blank">**Xray**</a> توصیه شده است. این پنل یک جایگزین عالی برای پنل X-UI می‌باشد.
 
 ![Persian Demo](https://user-images.githubusercontent.com/125398461/234265877-56660d3c-6185-4948-b676-77f317834372.png)
 
@@ -50,7 +55,7 @@
 
 ***
 ### فهرست مطالب
-- [چرا هیدیفای؟](#%DA%86%D8%B1%D8%A7-%D9%87%DB%8C%D8%AF%DB%8C%D9%81%D8%A7%DB%8C)
+- [چرا هیدیفای‌منیجر؟](#%DA%86%D8%B1%D8%A7-%D9%87%DB%8C%D8%AF%DB%8C%D9%81%D8%A7%DB%8C%D9%85%D9%86%DB%8C%D8%AC%D8%B1)
   - [ویژگی‌های جذاب](#%D9%88%DB%8C%DA%98%DA%AF%DB%8C%D9%87%D8%A7%DB%8C-%D8%AC%D8%B0%D8%A7%D8%A8)
   - [پروتکل‌های پشتیبانی شده](#%D9%BE%D8%B1%D9%88%D8%AA%DA%A9%D9%84%D9%87%D8%A7%DB%8C-%D9%BE%D8%B4%D8%AA%DB%8C%D8%A8%D8%A7%D9%86%DB%8C-%D8%B4%D8%AF%D9%87)
   - [پروکسی هوشمند برای سایت های غیر ایرانی و فیلترشده](#%D9%BE%D8%B1%D9%88%DA%A9%D8%B3%DB%8C-%D9%87%D9%88%D8%B4%D9%85%D9%86%D8%AF-%D8%A8%D8%B1%D8%A7%DB%8C-%D8%B3%D8%A7%DB%8C%D8%AA-%D9%87%D8%A7%DB%8C-%D8%BA%DB%8C%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C-%D9%88-%D9%81%DB%8C%D9%84%D8%AA%D8%B1%D8%B4%D8%AF%D9%87)
@@ -60,13 +65,13 @@
 - [راه‌های همکاری و ارتباط با ما](#%D8%B1%D8%A7%D9%87%D9%87%D8%A7%DB%8C-%D9%87%D9%85%DA%A9%D8%A7%D8%B1%DB%8C-%D9%88-%D8%A7%D8%B1%D8%AA%D8%A8%D8%A7%D8%B7-%D8%A8%D8%A7-%D9%85%D8%A7)
 
 ***
-## چرا هیدیفای؟
-هیدیفای تلفیقی از دو کلمه Hidden (مخفی شده) و Simplify (ساده سازی) است. پنلی با ويژگی ها و قابلیت‌های فراوان که به شما کمک می کند بدون دردسر و به صورت امن از اینترنت استفاده کنید. Hiddify نوعی VPN با کاربری ساده است که تضمین‌گر دسترسی به اینترنت آزاد با خیالی آسوده است.
+## چرا هیدیفای‌منیجر؟
+هیدیفای‌منیجر تلفیقی از دو کلمه Hidden (مخفی شده) و Simplify (ساده سازی) است. پنلی با ويژگی ها و قابلیت‌های فراوان که به شما کمک می کند بدون دردسر و به صورت امن از اینترنت استفاده کنید. Hiddify نوعی VPN با کاربری ساده است که تضمین‌گر دسترسی به اینترنت آزاد با خیالی آسوده است.
 
 ### ویژگی‌های جذاب 
 
 - **نصب سریع**
-- **پروکسی هوشمند** (کلاینت هیدیفای و کلش)
+- **پروکسی هوشمند** (کلاینت هیدیفای)
 - **بروزرسانی خودکار**
 - **بکاپ‌گیری خودکار** (هر ۶ ساعت)
 - **اتصال خودکار به کلادفلر**
@@ -127,8 +132,7 @@
 
 
 <details  markdown="1"> <summary>سیستم‌عامل‌های پشتیبانی شده</summary>
-هایدیفای روی اوبونتو ۲۰.۰۴ و ۲۲.۰۴ تست شده است.
-Ubuntu arm64 or amd64
+هیدیفای روی ابونتو ۲۲.۰۴ تست شده است. ابونتو arm64 یا amd64
 </details>
 
 
@@ -183,43 +187,59 @@ Ubuntu arm64 or amd64
 <div align=right dir="rtl">
 
 ## نصب پنل و آموزش
-**برای نصب پنل و مطالعه همه مطالب آموزشی در این رابطه، با کلیک روی تصویر زیر به صفحه ویکی پروژه مراجعه کنید.**
+**برای نصب پنل و مطالعه همه مطالب آموزشی در این رابطه، با کلیک روی تصویر زیر به وبسایت ما مراجعه کنید.**
 <div align=center>
 
- [![tutorial](https://github.com/hiddify/hiddify-config/blob/main/docs/Tutorials_fa.webp)](https://github.com/hiddify/hiddify-config/wiki/home_fa)
- 
+ <a href="https://hiddify.com/fa/manager/"><img alt="همه آموزش‌ها" width="100%" src="https://github.com/hiddify/Hiddify-Manager/assets/125398461/bcedf256-4aed-43f6-807d-460bb8ab6cf6" /></a>
+
+
+
 <!--
-<a href="https://github.com/hiddify/hiddify-config/wiki/Home_fa"><img width="40%" src="https://github.com/hiddify/hiddify-config/assets/125398461/6ce5d04f-d324-4e9a-9b64-41f2176e20c7" /></a>
+ [![tutorial](https://github.com/hiddify/hiddify-manager/blob/main/docs/Tutorials_fa.webp)](https://github.com/hiddify/hiddify-manager/wiki/home_fa)
+<a href="https://github.com/hiddify/hiddify-manager/wiki/Home_fa"><img width="40%" src="https://github.com/hiddify/hiddify-manager/assets/125398461/6ce5d04f-d324-4e9a-9b64-41f2176e20c7" /></a>
 -->
   
   </div>
 
   
+## سپاسگزاری‌ها
+مایلیم از دست‌اندرکاران پروژه‌های زیر صمیمانه قدردانی کنیم که پایه قوی و ویژگی‌های نوآورانه آنها موفقیت و عملکرد این پروژه را به میزان قابل توجهی افزایش داده است.
+
+- [ایکس‌ری](https://github.com/XTLS/Xray-core#installation)
+- [سینگ‌باکس](https://github.com/SagerNet/sing-box)
+- [لینوکس توسط لینوس توروالدز](https://github.com/torvalds/linux)
+- فونت: [وزیرمتن صابر راستی‌کردار](https://github.com/rastikerdar/vazirmatn)
   
 ## حمایت از پروژه
 
 ساده‌ترین راه حمایت از ما کلیک کردن روی ستاره (⭐) بالای همین صفحه است.
 
-ما برای سرویس هایمان به کمک مالی هم نیاز داریم. تمامی فعالیت‌های ما به صورت داوطلبانه انجام می‌شود و حمایت‌های مالی صرف توسعه پروژه می‌شود. اطلاعات و آدرس‌های حمایت‌ از ما را در [این لینک](https://github.com/hiddify/hiddify-config/wiki/support) مشاهده فرمایید.
+<div align=center>
+    
+<img alt="Star History Chart" width=50% src="https://api.star-history.com/svg?repos=Hiddify/hiddify-manager&type=Date)](https://star-history.com/#Hiddify/hiddify-manager&Date" />
+
+</div>
+
+ما برای سرویس هایمان به کمک مالی هم نیاز داریم. تمامی فعالیت‌های ما به صورت داوطلبانه انجام می‌شود و حمایت‌های مالی صرف توسعه پروژه می‌شود. اطلاعات و آدرس‌های حمایت‌ از ما را در [این لینک](https://github.com/hiddify/hiddify-manager/wiki/support) مشاهده فرمایید.
 
 ## راه‌های همکاری و ارتباط با ما
-اگر در هر یک از زمینه‌های زیر توانایی دارید، لطفا با ما در تماس باشید.
+اگر در هر یک از زمینه‌های زیر توانایی دارید، لطفا ضمن قید کردن تخصص خود با ما در تماس باشید.
 * تولید محتوا
 * برنامه‌نویسی پایتون
 * برنامه‌نویسی کاتلین
 * برنامه‌نویسی فلاتر
 <!--
 ## راه های ارتباط با ما
-* ایمیل: [hiddify@gmail.com](mailto:hiddify@gmail.com)
+* ایمیل: [contribute@hiddify.com](mailto:contribute@hiddify.com)
 * اطلاع رسانی: [کانال تلگرام](https://t.me/hiddify)
 * رفع مشکل: [گروه تلگرام](https://t.me/hiddify_board)
 
 </div>
 -->
-</br>
+<br>
 <div align=center>
     
-[![Email](https://img.shields.io/badge/Gmail-hiddify@gmail.com-green?style=flat-square&logo=gmail)](mailto:hiddify@gmail.com)
+[![Email](https://img.shields.io/badge/Gmail-contribute@hiddify.com-green?style=flat-square&logo=gmail)](mailto:contribute@hiddify.com)
 [![Telegram Channel](https://img.shields.io/endpoint?label=Channel&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify&color=blue)](https://telegram.dog/hiddify)
 [![Telegram Group](https://img.shields.io/endpoint?color=neon&label=Support%20Group&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify_board)](https://telegram.dog/hiddify_board)
 [![Youtube](https://img.shields.io/youtube/channel/views/UCxrmeMvVryNfB4XL35lXQNg?label=Youtube&style=flat-square&logo=youtube)](https://www.youtube.com/@hiddify)
@@ -232,8 +252,8 @@ Ubuntu arm64 or amd64
  </p>
  
 <p align=center> 
-<a href="https://github.com/hiddify/hiddify-config/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=hiddify/hiddify-config" />
+<a href="https://github.com/hiddify/hiddify-manager/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=hiddify/hiddify-manager" />
 </a>
 </p>
 <p align=center>

@@ -1,346 +1,223 @@
 #!/bin/bash
-cd $( dirname -- "$0"; )
-echo "we are going to install :)"
+cd $(dirname -- "$0")
+source ./common/utils.sh
+NAME="0-install"
+LOG_FILE="$(log_file $NAME)"
+
+# Fix the installation directory
+if [ ! -d "/opt/hiddify-manager/" ] && [ -d "/opt/hiddify-server/" ]; then
+    mv /opt/hiddify-server /opt/hiddify-manager
+    ln -s /opt/hiddify-manager /opt/hiddify-server
+fi
+if [ ! -d "/opt/hiddify-manager/" ] && [ -d "/opt/hiddify-config/" ]; then
+    mv /opt/hiddify-config/ /opt/hiddify-manager/
+    ln -s /opt/hiddify-manager /opt/hiddify-config
+fi
+
 export DEBIAN_FRONTEND=noninteractive
 if [ "$(id -u)" -ne 0 ]; then
-        echo 'This script must be run by root' >&2
-#        exit 1
-
-fi
-
-source ./common/ticktick.sh
-
-function set_config_from_hpanel(){
-
-        hiddify=`cd hiddify-panel;python3 -m hiddifypanel all-configs`
-        if [[ $? != 0 ]];then
-                echo "Exception in Hiddify Panel. Please send the log to hiddify@gmail.com"
-                exit 1
-        fi
-        tickParse  "$hiddify"
-        # tickVars
-
-        function setenv () {
-                echo $1=$2
-                export $1="$2"
-        }
-        for x in ``hconfigs.items()``; do
-                setenv "${x/__tick_data_hconfigs_/}" "${!x}" 
-        done
-
-        setenv GITHUB_USER hiddify
-        setenv GITHUB_REPOSITORY hiddify-config
-        setenv GITHUB_BRANCH_OR_TAG main
-        
-        setenv TLS_PORTS ``hconfigs[tls_ports]``
-        setenv HTTP_PORTS ``hconfigs[http_ports]``
-        setenv FIRST_SETUP ``hconfigs[first_setup]``
-        setenv DB_VERSION ``hconfigs[db_version]``
-
-        TELEGRAM_SECRET=``hconfigs[shared_secret]``
-
-        setenv TELEGRAM_USER_SECRET ${TELEGRAM_SECRET//-/}
-
-        setenv BASE_PROXY_PATH ``hconfigs[proxy_path]``
-        setenv TELEGRAM_LIB ``hconfigs[telegram_lib]``
-        setenv ADMIN_SECRET ``hconfigs[admin_secret]``
-
-        setenv ENABLE_V2RAY ``hconfigs[v2ray_enable]``
-        setenv WARP_MODE ``hconfigs[warp_mode]``
-        setenv WARP_PLUS_CODE ``hconfigs[warp_plus_code]``
-        setenv ENABLE_SS ``hconfigs[ssfaketls_enable]``
-        setenv SS_FAKE_TLS_DOMAIN ``hconfigs[ssfaketls_fakedomain]``
-        
-        setenv DECOY_DOMAIN ``hconfigs[decoy_domain]``
-
-        setenv SHARED_SECRET ``hconfigs[shared_secret]``
-        
-
-        setenv ENABLE_TELEGRAM ``hconfigs[telegram_enable]``
-        setenv TELEGRAM_FAKE_TLS_DOMAIN ``hconfigs[telegram_fakedomain]``
-        setenv TELEGRAM_AD_TAG ``hconfigs[telegram_adtag]``
-
-        setenv ENABLE_SHADOW_TLS ``hconfigs[shadowtls_enable]``
-        setenv SHADOWTLS_FAKEDOMAIN ``hconfigs[shadowtls_fakedomain]``
-
-        setenv FAKE_CDN_DOMAIN ``hconfigs[fake_cdn_domain]``
-        c=``hconfigs[country]``
-        if [[ "$c" == "" ]];then 
-                c="ir"
-        fi
-        setenv COUNTRY  $c
-        
-
-        setenv ENABLE_SSR ``hconfigs[ssr_enable]``
-        setenv SSR_FAKEDOMAIN ``hconfigs[ssr_fakedomain]``
-
-        setenv ENABLE_VMESS ``hconfigs[vmess_enable]``
-        setenv ENABLE_MONITORING false
-        setenv ENABLE_FIREWALL ``hconfigs[firewall]``
-        # setenv ENABLE_NETDATA ``hconfigs[netdata]``
-        setenv ENABLE_HTTP_PROXY ``hconfigs[http_proxy]`` # UNSAFE to enable, use proxy also in unencrypted 80 port
-        setenv ALLOW_ALL_SNI_TO_USE_PROXY ``hconfigs[allow_invalid_sni]`` #UNSAFE to enable, true=only MAIN domain is allowed to use proxy
-        setenv ENABLE_AUTO_UPDATE ``hconfigs[auto_update]``
-        setenv ENABLE_TROJAN_GO false
-        setenv ENABLE_SPEED_TEST ``hconfigs[speed_test]``
-        setenv BLOCK_IR_SITES ``hconfigs[block_iran_sites]``
-        setenv ONLY_IPV4 ``hconfigs[only_ipv4]``
-        setenv PATH_VMESS ``hconfigs[path_vmess]``
-        setenv PATH_VLESS ``hconfigs[path_vless]``
-        setenv PATH_SS ``hconfigs[path_v2ray]``
-        setenv PATH_TROJAN ``hconfigs[path_trojan]``
-        setenv PATH_TCP ``hconfigs[path_tcp]``
-        setenv PATH_WS ``hconfigs[path_ws]``
-        setenv PATH_GRPC ``hconfigs[path_grpc]``
-
-        setenv REALITY_SERVER_NAMES ``hconfigs[reality_server_names]``
-        setenv REALITY_FALLBACK_DOMAIN ``hconfigs[reality_fallback_domain]``
-        setenv REALITY_PRIVATE_KEY ``hconfigs[reality_private_key]``
-        setenv REALITY_SHORT_IDS ``hconfigs[reality_short_ids]``
-
-        
-
-        setenv SERVER_IP `curl --connect-timeout 1 -s https://v4.ident.me/`
-        setenv SERVER_IPv6 `curl  --connect-timeout 1 -s https://v6.ident.me/`
-
-        function get () {
-                group=$1
-                index=`printf "%012d" "$2"` 
-                member=$3
-                
-                var="__tick_data_${group}_${index}_${member}";
-                echo ${!var}
-        }
-        REALITY_MULTI=
-        REALITY_MULTI_GRPC=
-        FORCE_XRAY_DOMAINS_MULTI=
-        MAIN_DOMAIN=
-        for i in $(seq 0 ``domains.length()``); do
-                domain=$(get domains $i domain)
-                servernames=$(get domains $i servernames)
-                mode=$(get domains $i mode)
-                grpc=$(get domains $i grpc)
-                case $mode in
-                direct|cdn|worker|relay|auto_cdn_ip|old_xtls_direct|sub_link_only)
-                        MAIN_DOMAIN="$domain;$MAIN_DOMAIN"
-                        if [ "$mode" == "old_xtls_direct" ];then
-                                FORCE_XRAY_DOMAINS_MULTI="$domain;$FORCE_XRAY_DOMAINS_MULTI"
-                        fi 
-                        ;;
-                reality)
-                        if [ "$grpc" == "true" ];then
-                                REALITY_MULTI_GRPC="$domain:${servernames:-$domain};$REALITY_MULTI_GRPC"
-                        else 
-                                REALITY_MULTI="$domain:${servernames:-$domain};$REALITY_MULTI"
-                        fi
-                        ;;
-                ss_faketls)
-                        setenv SS_FAKE_TLS_DOMAIN $domain
-                        ;;
-                telegram_faketls)
-                        setenv TELEGRAM_FAKE_TLS_DOMAIN $domain                        
-                        ;;
-                fake_cdn)
-                        setenv FAKE_CDN_DOMAIN $domain
-                        ;;
-                *)
-                        # Code block to execute for other cases (optional)
-                        ;;
-                esac
-
-        done
-        setenv REALITY_MULTI $REALITY_MULTI
-        setenv REALITY_MULTI_GRPC $REALITY_MULTI_GRPC
-        setenv MAIN_DOMAIN $MAIN_DOMAIN
-        setenv FORCE_XRAY_DOMAINS_MULTI $FORCE_XRAY_DOMAINS_MULTI
-
-        USER_SECRET=
-        for i in $(seq 0 ``users.length()``); do
-        uuid=$(get users $i uuid)
-        secret=${uuid//-/}
-        if [ "$secret" != "" ];then
-                USER_SECRET="$secret;$USER_SECRET"
-        fi
-        done
-
-
-        setenv USER_SECRET $USER_SECRET
-}
-function check_req(){
-        
-   for req in hexdump dig curl git python3;do
-        which $req
-        if [[ "$?" != 0 ]];then
-                apt update
-                apt install -y add-apt-repository
-                add-apt-repository -y ppa:deadsnakes/ppa
-
-                apt install -y dnsutils bsdmainutils curl git python3.10 python3.10-dev
-                break
-        fi
-   done
-   
-}
-
-function runsh() {          
-        command=$1
-        if [[ $3 == "false" ]];then
-                command=uninstall.sh
-        fi
-        pushd $2 >>/dev/null 
-        # if [[ $? != 0]];then
-        #         echo "$2 not found"
-        # fi
-        if [[ $? == 0 && -f $command ]];then
-                echo "==========================================================="
-                echo "===$command $2"
-                echo "==========================================================="        
-                bash $command
-        fi
-        popd >>/dev/null
-}
-
-function do_for_all() {
-        #cd /opt/$GITHUB_REPOSITORY
-        bash common/replace_variables.sh
-        if [ "$MODE" != "apply_users" ];then
-                systemctl daemon-reload
-                runsh $1.sh common
-                runsh $1.sh other/warp  
-                #runsh $1.sh certbot
-                runsh $1.sh acme.sh
-                runsh $1.sh nginx
-                # runsh $1.sh sniproxy
-                
-                runsh $1.sh other/speedtest
-                runsh $1.sh other/telegram $ENABLE_TELEGRAM
-                runsh $1.sh other/ssfaketls $ENABLE_SS
-                runsh $1.sh other/v2ray $ENABLE_V2RAY
-                runsh $1.sh other/shadowtls $ENABLE_SHADOWTLS
-                # runsh $1.sh other/clash-server $ENABLE_TUIC
-                # runsh $1.sh deprecated/vmess $ENABLE_VMESS
-                # runsh uninstall.sh deprecated/vmess
-                # runsh $1.sh deprecated/monitoring $ENABLE_MONITORING
-                # runsh uninstall.sh deprecated/monitoring
-                # runsh $1.sh other/netdata false $ENABLE_NETDATA
-                # runsh $1.sh deprecated/trojan-go  $ENABLE_TROJAN_GO
-                #WARP_ENABLE=$([ "$WARP_MODE" != 'disable' ] || echo "false")
-                
-        fi
-        runsh $1.sh haproxy
-        runsh $1.sh singbox
-        runsh $1.sh xray
-        
-        
-}
-
-
-function main(){
-        rm -rf log/system/xray*
-        
-
-        export MODE="$1"
-        
-        if [ "$MODE" != "apply_users" ];then
-                bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --version 1.8.1
-                runsh install.sh hiddify-panel
-        fi
-        # source common/set_config_from_hpanel.sh
-        set_config_from_hpanel
-        if [[ $DB_VERSION == "" ]];then
-                echo "ERROR!!!! There is an error in the installation of python panel. Exit...."
-                exit 1
-        fi
-        
-        # check_req
-        
-        
-        # set_env_if_empty config.env.default
-        # set_env_if_empty config.env      
-
-        # if [[ "$BASE_PROXY_PATH" == "" ]]; then
-        #         replace_empty_env BASE_PROXY_PATH "" $USER_SECRET ".*"
-        # fi
-        # if [[ "$TELEGRAM_USER_SECRET" == "" ]]; then
-        #         replace_empty_env TELEGRAM_USER_SECRET "" $USER_SECRET ".*"
-        # fi
-        
-        # cd /opt/$GITHUB_REPOSITORY
-        # git pull
-
-        # if [[ -z "config.env $FIRST_SETUP" == "" ]];then
-        #         replace_empty_env FIRST_SETUP "First Setup Detected!" false ".*"
-        #         export FIRST_SETUP="true"
-        # fi
-
-        if [ "$MODE" == "install-docker" ];then
-                echo "install-docker"
-                export DO_NOT_RUN=true
-                export ENABLE_SS=true
-                export ENABLE_TELEGRAM=true
-                export ENABLE_FIREWALL=false
-                export ENABLE_AUTO_UPDATE=false
-                export ONLY_IPV4=false
-        fi
-        if [ "$MODE" == "apply_users" ];then
-                export DO_NOT_INSTALL=true
-        fi
-        if [[ -z "$DO_NOT_INSTALL" || "$DO_NOT_INSTALL" == false  ]];then
-                do_for_all install
-                systemctl daemon-reload
-        fi
-
-        if [[ -z "$DO_NOT_RUN" || "$DO_NOT_RUN" == false ]];then
-                do_for_all run
-                if [ "$MODE" != "apply_users" ];then        
-                        echo ""
-                        echo ""
-                        bash status.sh
-                        echo "==========================================================="
-                        bash common/logo.ico
-                        echo "Finished! Thank you for helping to skip filternet."
-                        echo "Please open the following link in the browser for client setup"
-                        
-                        cat use-link
-                        
-                fi
-        fi
-
-        for s in hiddify-xray hiddify-singbox hiddify-nginx hiddify-haproxy;do
-	        s=${s##*/}
-	        s=${s%%.*}
-	        if [[ "$(systemctl is-active $s)" != "active" ]];then
-                        echo "an important service $s is not working yet"
-                        sleep 5
-                        echo "checking again..."
-                        if [[ "$(systemctl is-active $s)" != "active" ]];then
-                              echo "an important service $s is not working again"
-                              echo "Installation Failed!"
-                              exit 32
-                        fi
-                        
-                fi
-                
-        done
-        # if [[ $(/usr/local/bin/xray run -test -confdir xray/configs) ]];then
-        #         echo "xray configuration failed "
-        #         exit 33
-        # fi
-        echo "---------------------Finished!------------------------"
-        rm log/install.lock
-        if [ "$MODE" != "apply_users" ];then
-                systemctl restart hiddify-panel
-        fi
-        systemctl start hiddify-panel
-
-}       
-
-mkdir -p log/system/
-
-if [[ -f log/install.lock && $(( $(date +%s) - $(cat log/install.lock) )) -lt 120 ]]; then
-    echo "Another installation is running.... Please wait until it finishes or wait 5 minutes or execute 'rm -f log/install.lock'"
+    echo 'This script must be run by root' >&2
     exit 1
 fi
+function main() {
+    update_progress "Please wait..." "We are going to install Hiddify..." 0
+    export ERROR=0
+    
+    export PROGRESS_ACTION="Installing..."
+    if [ "$MODE" == "apply_users" ];then
+        export DO_NOT_INSTALL="true"
+    elif [ -d "/hiddify-data-default/" ] && [ -z "$(ls -A /hiddify-data/ 2>/dev/null)" ]; then
+        cp -r /hiddify-data-default/* /hiddify-data/
+    fi
+    if [ "$DO_NOT_INSTALL" == "true" ];then
+        PROGRESS_ACTION="Applying..."
+    fi
+    if [ "$HIDDIFY_DEBUG" = "1" ]; then
+        export USE_VENV=true
+    fi
+    install_python
+    activate_python_venv
+    
+    if [ "$MODE" != "apply_users" ]; then
+        clean_files
+        update_progress "${PROGRESS_ACTION}" "Common Tools and Requirements" 2
+        runsh install.sh common &
+        if [ "${DOCKER_MODE}" != "true" ];then
+            install_run other/redis &
+            install_run other/mysql &
+        fi    
+        wait
+        # Because we need to generate reality pair in panel
+        # is_installed xray || bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install --version 1.8.4
+        
+        install_run hiddify-panel
+    fi
+    
+    # source common/set_config_from_hpanel.sh
+    update_progress "HiddifyPanel" "Reading Configs from Panel..." 5
+    set_config_from_hpanel
+    
+    update_progress "Applying Configs" "..." 8
+    
+    bash common/replace_variables.sh
+    
+    if [ "$MODE" != "apply_users" ]; then
+        bash ./other/deprecated/remove_deprecated.sh
+        update_progress "Configuring..." "System and Firewall settings" 10
+        runsh run.sh common &
+        
+        update_progress "${PROGRESS_ACTION}" "Nginx" 15
+        install_run nginx &
+        
+        (
+            update_progress "${PROGRESS_ACTION}" "Haproxy for Spliting Traffic" 20
+            install_run haproxy
+        
+            update_progress "${PROGRESS_ACTION}" "Getting Certificates" 30
+            install_run acme.sh 
+        )&
+        
+        update_progress "${PROGRESS_ACTION}" "Personal SpeedTest" 35
+        install_run other/speedtest $(hconfig "speed_test") &
+        
+        update_progress "${PROGRESS_ACTION}" "Telegram Proxy" 40
+        install_run other/telegram $(hconfig "telegram_enable") &
+        
+        update_progress "${PROGRESS_ACTION}" "FakeTlS Proxy" 45
+        install_run other/ssfaketls $(hconfig "ssfaketls_enable") &
+        
+        # update_progress "${PROGRESS_ACTION}" "V2ray WS Proxy" 50
+        # install_run other/v2ray $ENABLE_V2RAY
+        
+        update_progress "${PROGRESS_ACTION}" "SSH Proxy" 55
+        install_run other/ssh $(hconfig "ssh_server_enable") &
+        
+        #update_progress "${PROGRESS_ACTION}" "ShadowTLS" 60
+        #install_run other/shadowtls $(hconfig "shadowtls_enable")
+        
+        
+        update_progress "${PROGRESS_ACTION}" "Xray" 70
+        if [[ $(hconfig "core_type") == "xray" ]];then
+            install_run xray 1 &
+        else
+            install_run xray 0 &
+        fi
+        
+        
+        
+        update_progress "${PROGRESS_ACTION}" "Warp" 75
+        
+        if [[ $(hconfig "warp_mode") != "disable" ]];then
+            install_run other/warp 1 &
+        else   
+            install_run other/warp 0 &
+        fi
+        
+        update_progress "${PROGRESS_ACTION}" "HiddifyCli" 80
+        install_run other/hiddify-cli $(hconfig "hiddifycli_enable") &
+        
+    fi
+    update_progress "${PROGRESS_ACTION}" "Wireguard" 85
+    install_run other/wireguard $(hconfig "wireguard_enable") &
+    
+    update_progress "${PROGRESS_ACTION}" "Singbox" 95
+    install_run singbox &
+    
+    update_progress "${PROGRESS_ACTION}" "Almost Finished" 98
+    wait 
+    echo "---------------------Finished!------------------------"
+    remove_lock $NAME
+    if [ "$MODE" != "apply_users" ]; then
+        systemctl kill -s SIGTERM hiddify-panel
+    fi
+    systemctl start hiddify-panel
+    update_progress "${PROGRESS_ACTION}" "Done" 100
+    
+}
 
-echo "$(date +%s)" > log/install.lock
-main $@|& tee log/system/0-install.log
+function clean_files() {
+    rm -rf log/system/xray*
+    rm -rf /opt/hiddify-manager/xray/configs/*.json
+    rm -rf /opt/hiddify-manager/singbox/configs/*.json
+    rm -rf /opt/hiddify-manager/haproxy/*.cfg
+    find ./ -type f -name "*.template" -exec rm -f {} \;
+}
+
+function cleanup() {
+    error "Script interrupted. Exiting..."
+    # disable_ansii_modes
+    remove_lock $NAME
+    exit 9
+}
+
+# Trap the Ctrl+C signal and call the cleanup function
+trap cleanup SIGINT
+
+function set_config_from_hpanel() {
+    reload_all_configs >/dev/null
+    if [[ $? != 0 ]]; then
+        error "Exception in Hiddify Panel. Please send the log to hiddify@gmail.com"
+        exit 4
+    fi
+    
+    export SERVER_IP=$(curl --connect-timeout 1 -s https://v4.ident.me/)
+    export SERVER_IPv6=$(curl --connect-timeout 1 -s https://v6.ident.me/)
+}
+
+function install_run() {
+    echo "==========================================================="
+    if [ "$MODE" == "install-docker" ];then 
+            runsh install.sh $1
+            return
+    elif [ "$DO_NOT_INSTALL" != "true" ];then
+            runsh install.sh $@
+        if [ "$MODE" != "apply_users" ]; then
+            systemctl daemon-reload
+        fi
+    fi
+    runsh run.sh $@
+    echo "==========================================================="
+}
+
+function runsh() {
+    command=$1
+    if [[ $3 == "false" || $3 == "0" ]]; then
+        command=disable.sh
+    fi
+    pushd $2 >>/dev/null
+    # if [[ $? != 0]];then
+    #         echo "$2 not found"
+    # fi
+    if [[ $? == 0 && -f $command ]]; then
+        
+        echo "===$command $2"
+        bash $command
+    fi
+    popd >>/dev/null
+}
+
+if [[ " $@ " == *" --no-gui "* ]]; then
+    set -- "${@/--no-gui/}"
+    export MODE="$1"
+    set_lock $NAME
+    if [[ " $@ " == *" --no-log "* ]]; then
+        set -- "${@/--no-log/}"
+        main
+    else
+        main |& tee $LOG_FILE
+    fi
+    error_code=$?
+    remove_lock $NAME
+else
+    show_progress_window --subtitle $(get_installed_config_version) --log $LOG_FILE ./install.sh $@ --no-gui --no-log
+    error_code=$?
+    if [[ $error_code != "0" ]]; then
+        # echo less -r -P"Installation Failed! Press q to exit" +G "$log_file"
+        msg_with_hiddify "Installation Failed! $error_code"
+    else
+        msg_with_hiddify "The installation has successfully completed."
+        check_hiddify_panel $@ |& tee -a $LOG_FILE
+    fi
+fi
+
+exit $error_code

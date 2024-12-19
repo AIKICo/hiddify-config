@@ -1,110 +1,97 @@
 #!/bin/bash
+cd $(dirname -- "$0")
+source ./common/utils.sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
-cd $( dirname -- "$0"; )
+# Create necessary directories and define constants
 
-function get_commit_version(){
-    COMMIT_URL=$(curl -s https://api.github.com/repos/hiddify/$1/git/refs/heads/main|jq -r .object.url)
-    VERSION=$(curl -s $COMMIT_URL|jq -r .committer.date)
-    echo ${VERSION:5:11}
-}
-
-function main(){
-    rm -rf sniproxy
-    rm -rf caddy
-    ./hiddify-panel/backup.sh
-    UPDATE=0
-    PANEL_UPDATE=0
-    if [[ "$1" == "" ]];then
-        PACKAGE_MODE=$(cd hiddify-panel;python3 -m hiddifypanel all-configs|jq -r ".hconfigs.package_mode")
-        FORCE=false
-    else
-        PACKAGE_MODE=$1
-        FORCE=true
-    fi
-    
-    if [[ "$PACKAGE_MODE" == "develop" ]];then
-        echo "you are in develop mode"
-        #LATEST=$(get_commit_version HiddifyPanel)
-        #INSTALL_DIR=$(pip show hiddifypanel |grep Location |awk -F": " '{ print $2 }')
-        #CURRENT=$(cat $INSTALL_DIR/hiddifypanel/VERSION)
-        #echo "DEVLEOP: hiddify panel version current=$CURRENT latest=$LATEST"
-        #if [[ FORCE == "true" || "$LATEST" != "$CURRENT" ]];then
-        #    pip3 uninstall -y hiddifypanel
-        #    pip3 install -U git+https://github.com/hiddify/HiddifyPanel
-        #    echo $LATEST>$INSTALL_DIR/hiddifypanel/VERSION
-        #    echo "__version__='$LATEST'">$INSTALL_DIR/hiddifypanel/VERSION.py
-        #    UPDATE=1
-        #fi
-        pip install -U hiddifypanel --pre
-        PANEL_UPDATE=1
-    else 
-        #hiddify=`cd hiddify-panel;python3 -m hiddifypanel downgrade`
-        
-        CURRENT=`pip3 freeze |grep hiddifypanel|awk -F"==" '{ print $2 }'`
-        LATEST=`lastversion hiddifypanel --at pip`
-        echo "hiddify panel version current=$CURRENT latest=$LATEST"
-        if [[ $FORCE == "true" || "$CURRENT" != "$LATEST" ]];then
-            echo "panel is outdated! updating...."
-            pip3 install -U hiddifypanel==$LATEST
-            PANEL_UPDATE=1
-        fi
-    fi
-
-    
-    
-    CURRENT_CONFIG_VERSION=$(cat VERSION)
-    if [[ "$PACKAGE_MODE" == "develop" ]];then
-        LAST_CONFIG_VERSION=$(get_commit_version hiddify-config)
-        echo "DEVELOP: Current Config Version=$CURRENT_CONFIG_VERSION -- Latest=$LAST_CONFIG_VERSION"
-        if [[ $FORCE == "true" || "$CURRENT_CONFIG_VERSION" != "$LAST_CONFIG_VERSION" ]];then
-            wget -c https://github.com/hiddify/hiddify-config/archive/refs/heads/main.tar.gz
-            # rm  -rf nginx/ xray/
-            tar xvzf main.tar.gz --strip-components=1
-            rm main.tar.gz
-            echo $LAST_CONFIG_VERSION > VERSION
-            rm -rf other/netdata
-            bash install.sh
-            UPDATE=1
-        fi
-    else 
-        LAST_CONFIG_VERSION=$(lastversion hiddify/hiddify-config)
-        echo "Current Config Version=$CURRENT_CONFIG_VERSION -- Latest=$LAST_CONFIG_VERSION"
-        if [[ $FORCE == "true" || "$CURRENT_CONFIG_VERSION" != "$LAST_CONFIG_VERSION" ]];then
-            echo "Config is outdated! updating..."
-            
-            wget  $(lastversion --at github --assets --filter hiddify-config.zip  hiddify/hiddify-config) -O hiddify-config.zip && rm xray/configs/*
-            # rm  -rf nginx/ xray/
-            
-            apt install -y  unzip
-            unzip -o hiddify-config.zip
-            rm hiddify-config.zip
-            bash install.sh
-            UPDATE=1
-            
-        fi
-    fi
-    if [[ $UPDATE == 0 ]];then
-        echo "---------------------Finished!------------------------"
-    fi
-    if [[ "$PANEL_UPDATE" == 1 ]];then
-        systemctl restart hiddify-panel
-    fi
-
-    if [[ "$PANEL_UPDATE" == 1 &&  $UPDATE == 0 ]];then
-        bash apply_configs.sh
-    fi
-    rm log/update.lock
-}
-
-mkdir -p log/system/
-
-
-if [[ -f log/update.lock && $(( $(date +%s) - $(cat log/update.lock) )) -lt 120 ]]; then
-    echo "Another installation is running.... Please wait until it finishes or wait 5 minutes or execute 'rm -f log/update.lock'"
+NAME="update"
+LOG_FILE="$(log_file $NAME)"
+function cleanup() {
+    error "Script interrupted. Exiting..."
+    # disable_ansii_modes
+    #    reset
+    remove_lock $NAME
     exit 1
+}
+
+trap cleanup SIGINT
+
+function main() {
+    update_progress "Hiddify Updater" "Checking for update" 1
+    echo "Checking for update..."
+    local force=false
+    local manager_update=0
+    local panel_update=0
+
+    if [[ -n "$1" ]]; then
+        local package_mode=$1
+        force=true
+    else
+        local package_mode=$(get_package_mode)
+    fi
+    local current_config_version=$(get_installed_config_version)
+    local current_panel_version=$(get_installed_panel_version)
+
+    # if [[ $package_mode == "release" ]] && [[ $current_config_version == *"dev"* || ! $current_panel_version == 10* || ! $current_panel_version == 9* ]]; then
+    #     bash common/downgrade.sh
+    #     return 0
+    # fi
+
+    rm -rf sniproxy caddy
+    update_progress "Hiddify Updater" "Creating a backup" 5
+    echo "Creating a backup ..."
+    ./hiddify-panel/backup.sh
+
+    case "$package_mode" in
+    develop)
+        # Use the latest commit from GitHub
+        latest_panel=$(get_commit_version Hiddify-Panel)
+        latest_manager=$(get_commit_version hiddify-manager)
+        ;;
+    beta)
+        latest_panel=$(get_pre_release_version hiddify-panel)
+        latest_manager=$(get_pre_release_version hiddify-manager)
+        ;;
+    release)
+        latest_panel=$(get_release_version hiddify-panel)
+        latest_manager=$(get_release_version hiddify-manager)
+        ;;
+    esac
+
+    [[ "$latest_panel" != "$current_panel_version" ]] && panel_update=1
+    [[ "$latest_manager" != "$current_config_version" ]] && manager_update=1
+    echo "$package_mode Latest panel version: $latest_panel Installed: $current_panel_version Lastest manager version: $latest_manager Installed: $current_config_version"
+    if [[ "$force" == "true" || $panel_update == 1 || $manager_update == 1 ]]; then
+        bash <(curl -sSL https://raw.githubusercontent.com/hiddify/hiddify-config/main/common/download.sh) "$package_mode" "$force" "--no-gui" "--no-log"
+    else
+        echo "Nothing to update"
+    fi
+    remove_lock $NAME
+    echo "---------------------Finished!------------------------"
+
+}
+
+if [[ " $@ " == *" --no-gui "* ]]; then
+    set -- "${@/--no-gui/}"
+    set_lock $NAME
+    if [[ " $@ " == *" --no-log "* ]]; then
+        set -- "${@/--no-log/}"
+        main "$@"
+    else
+        main "$@" |& tee $LOG_FILE
+    fi
+    error_code=$?
+    remove_lock $NAME
+else
+    show_progress_window --subtitle "Updater" --log $LOG_FILE ./update.sh $@ --no-gui --no-log
+    error_code=$?
+    if [[ $error_code != "0" ]]; then
+        # echo less -r -P"Installation Failed! Press q to exit" +G "$log_file"
+        msg_with_hiddify "Installation Failed! code=$error_code"
+    else
+        msg_with_hiddify "The update has successfully completed."
+        check_hiddify_panel $@ |& tee -a $LOG_FILE
+    fi
 fi
-
-echo "$(date +%s)" > log/update.lock
-
-main $@|& tee log/system/update.log
+exit $error_code

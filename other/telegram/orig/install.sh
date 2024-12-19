@@ -1,20 +1,17 @@
 echo "telegram proxy install.sh $*"
-systemctl stop mtproxy.service
-systemctl disable mtproxy.service
-systemctl stop mtproto-proxy.service
-systemctl disable mtproto-proxy.service
+systemctl stop mtproxy.service >/dev/null 2>&1
+systemctl disable mtproxy.service >/dev/null 2>&1
+systemctl stop mtproto-proxy.service >/dev/null 2>&1
+systemctl disable mtproto-proxy.service >/dev/null 2>&1
 
+install_package git curl build-essential libssl-dev zlib1g-dev
 
-apt install -y git curl build-essential libssl-dev zlib1g-dev
-
-
-git clone https://github.com/hiddify/MTProxy
+git clone https://github.com/hiddify/MTProxy > dev/null
 cd MTProxy
 
-make 
+make
 
 cd objs/bin
 
 curl -s https://core.telegram.org/getProxySecret -o proxy-secret
 curl -s https://core.telegram.org/getProxyConfig -o proxy-multi.conf
-

@@ -4,28 +4,31 @@
 
 
 
-[**![Lang_farsi](https://user-images.githubusercontent.com/125398461/234186932-52f1fa82-52c6-417f-8b37-08fe9250a55f.png) &nbsp;فارسی**](README_fa.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**![Lang_Chinese](https://user-images.githubusercontent.com/125398461/236453142-16f3a81e-8f40-403d-a452-34c4c9ed8f64.png) 简体中文**](README_cn.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://img.shields.io/badge/%20Wiki-Page-808080?style=flat-square)](https://github.com/hiddify/hiddify-config/wiki)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://img.shields.io/badge/FAQ-Here-512DA8?style=flat-square&logo=Favro)](https://github.com/hiddify/hiddify-config/discussions/categories/q-a-%D8%B3%D9%88%D8%A7%D9%84%D8%A7%D8%AA-%D8%B1%D8%A7%DB%8C%D8%AC)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://img.shields.io/badge/Report-Bugs-F67909?style=flat-square&logo=Open-Bug-Bounty)](https://github.com/hiddify/hiddify-config/issues)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+[**![Lang_farsi](https://user-images.githubusercontent.com/125398461/234186932-52f1fa82-52c6-417f-8b37-08fe9250a55f.png) &nbsp;فارسی**](README_fa.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**Русский 🇷🇺**](README_ru.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**简体中文 🇨🇳**](README_cn.md)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://img.shields.io/badge/%20Wiki-Page-808080?style=flat-square)](https://github.com/hiddify/hiddify-manager/wiki)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://img.shields.io/badge/FAQ-Here-512DA8?style=flat-square&logo=Favro)](https://github.com/hiddify/hiddify-manager/discussions/categories/q-a-%D8%B3%D9%88%D8%A7%D9%84%D8%A7%D8%AA-%D8%B1%D8%A7%DB%8C%D8%AC)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://img.shields.io/badge/Report-Bugs-F67909?style=flat-square&logo=Open-Bug-Bounty)](https://github.com/hiddify/hiddify-manager/issues)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 <br>
 <div align=center markdown="1">
 
+![Hiddify Manager logo](https://github.com/hiddify/Hiddify-Manager/assets/125398461/eeac9916-f57e-4eaf-96dd-f4ea029a8389)
+<!--
 ![Hiddify Logo](https://user-images.githubusercontent.com/125398461/227777845-a4d0f86b-faa2-4f2b-a410-4aa5f68bfe19.png)
-
+![Hiddify Manager logo](https://github.com/hiddify/Hiddify-Manager/assets/125398461/4831e4ab-fe8a-4741-81e4-472e4ee7351a)
+-->
+ 
 </div>
 <br>
 <div align=center>
 
 
-<!--[![Total Downloads](https://img.shields.io/github/downloads/hiddify/hiddify-config/total?label=downloads%20after%202023%2F03%2F27%2011%3A00%20&style=flat-square)](https://github.com/hiddify/hiddify-config/)
-[![Downloads](https://img.shields.io/pypi/dm/hiddifypanel?style=flat-square)](https://pypistats.org/packages/hiddifypanel)-->
- [![Downloads](https://static.pepy.tech/badge/hiddifypanel?style=flat-square&v3)](https://pepy.tech/project/hiddifypanel?display=monthly&versions=2.*&versions=1.*&versions=3.*)[![Last Version](https://img.shields.io/github/release/hiddify/hiddify-config/all.svg?style=flat-square)](https://github.com/hiddify/hiddify-config/)[![Last Release Date](https://img.shields.io/github/release-date/hiddify/hiddify-config.svg?style=flat-square)](https://github.com/hiddify/hiddify-config/)![commits](https://img.shields.io/github/commit-activity/m/hiddify/hiddify-config?style=flat-square)[![Youtube](https://img.shields.io/youtube/channel/views/UCxrmeMvVryNfB4XL35lXQNg?label=Youtube&style=flat-square&logo=youtube)](https://www.youtube.com/@hiddify)[![Telegram Channel](https://img.shields.io/endpoint?label=Channel&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify&color=blue)](https://telegram.dog/hiddify)[![Telegram Group](https://img.shields.io/endpoint?color=neon&label=Support%20Group&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify_board)](https://telegram.dog/hiddify_board)
+
+ [![Downloads](https://static.pepy.tech/badge/hiddifypanel?style=flat-square)](https://www.pepy.tech/projects/hiddifypanel?versions=8.*&versions=9.*&versions=10.*&versions=11.*)[![Last Version](https://img.shields.io/github/release/hiddify/hiddify-manager/all.svg?style=flat-square)](https://github.com/hiddify/hiddify-manager/)[![Last Release Date](https://img.shields.io/github/release-date/hiddify/hiddify-manager.svg?style=flat-square)](https://github.com/hiddify/hiddify-manager/)[![commits](https://img.shields.io/github/commit-activity/m/hiddify/hiddify-manager?style=flat-square)](https://github.com/hiddify/hiddify-manager/) [![Youtube](https://img.shields.io/youtube/channel/views/UCxrmeMvVryNfB4XL35lXQNg?label=Youtube&style=flat-square&logo=youtube)](https://www.youtube.com/@hiddify)[![Telegram Channel](https://img.shields.io/endpoint?label=Channel&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify&color=blue)](https://telegram.dog/hiddify)[![Telegram Group](https://img.shields.io/endpoint?color=neon&label=Support%20Group&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify_board)](https://telegram.dog/hiddify_board/5)[![Gurubase](https://img.shields.io/badge/Gurubase-Ask%20Hiddify--Manager%20Guru-006BFF?style=flat-square)](https://gurubase.io/g/hiddify-manager)
 <!--
 [![Youtube](https://img.shields.io/youtube/channel/views/UCxrmeMvVryNfB4XL35lXQNg?label=Youtube&style=flat-square)](https://www.youtube.com/@hiddify/videos)
 [![Telegram Channel](https://img.shields.io/endpoint?label=Telegram&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify)](https://telegram.dog/hiddify)
 [![Telegram Group](https://img.shields.io/endpoint?color=neon&label=Support%20Group&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify_board)](https://telegram.dog/hiddify_board)
-[![GitHub Stars](https://img.shields.io/tokei/lines/github/hiddify/hiddify-config.svg)](https://github.com/hiddify/hiddify-config/)
-[![GitHub Stars](https://img.shields.io/github/stars/hiddify/hiddify-config.svg)](https://github.com/hiddify/hiddify-config/)
-[![GitHub Forks](https://img.shields.io/github/forks/hiddify/hiddify-config.svg)](https://github.com/hiddify/hiddify-config/)
+[![GitHub Stars](https://img.shields.io/tokei/lines/github/hiddify/hiddify-manager.svg)](https://github.com/hiddify/hiddify-manager/)
+[![GitHub Stars](https://img.shields.io/github/stars/hiddify/hiddify-manager.svg)](https://github.com/hiddify/hiddify-manager/)
+[![GitHub Forks](https://img.shields.io/github/forks/hiddify/hiddify-manager.svg)](https://github.com/hiddify/hiddify-manager/)
 [![Telegram Channel](https://img.shields.io/endpoint?style=social&url=https%3A%2F%2Frunkit.io%2Fdamiankrawczyk%2Ftelegram-badge%2Fbranches%2Fmaster%3Furl%3Dhttps%3A%2F%2Ft.me%2Fhiddify&label=Telegram
 )](https://telegram.com/hiddify/)
 
@@ -40,12 +43,18 @@
 
 <div dir="ltr" markdown="1">
 
-## Welcome to Hiddify
+## Welcome to Hiddify-Manager
 
-Hiddify is a powerful and professional anti-censorship toolbox, which is a multi-user panel with an effortless installation and <b>supporting more than 20 protocols</b> including <b>Reality</b> and <b>Telegram proxy</b> to circumvent filtering.  It's optimized for censorship circumvention in <b>China</b>, <b>Russia</b> and <b>Iran</b> and Recommended by <a href="https://github.com/XTLS/Xray-core#installation" target="_blank"><b>Xray</b></a>. It's a great replacement of X-UI panel.
+Hiddify-Manager is a powerful and professional anti-censorship toolbox, which is a multi-user panel with an effortless installation and <b>supporting more than 20 protocols</b> including <b>Reality</b> and <b>Telegram proxy</b> to circumvent filtering.  It's optimized for censorship circumvention in <b>China</b>, <b>Russia</b> and <b>Iran</b> and listed by <a href="https://github.com/XTLS/Xray-core#installation" target="_blank"><b>Xray</b></a>. 
 
 
-![English Demo](https://user-images.githubusercontent.com/125398461/234265624-36ee0a18-d4e8-4803-a9ad-331a7c5998e3.png)
+
+***
+
+<div align=center>
+<img alt="English Demo" src="https://user-images.githubusercontent.com/125398461/234265624-36ee0a18-d4e8-4803-a9ad-331a7c5998e3.png">
+
+</div>
 
 
 
@@ -58,10 +67,9 @@ Hiddify is a powerful and professional anti-censorship toolbox, which is a multi
 
 
 
-***
 
 ### Table of Contents
-- [Why Hiddify?](#why-hiddify)
+- [Why Hiddify-Manager?](#why-hiddify-manager)
   - [Attractive features](#attractive-features)
   - [Supported protocols](#supported-protocols)
   - [Smart Proxy For Domestic And Filtered Sites](#smart-proxy-for-domestic-and-filtered-sites)
@@ -72,8 +80,8 @@ Hiddify is a powerful and professional anti-censorship toolbox, which is a multi
 
 
 ***
-## Why Hiddify?
-Hiddify is a mixture of Hidden and Simplify. It is a panel with a wide range of features and capabilities that helps you enjoy hassle-free and secure internet browsing. Serving as a user-friendly VPN solution, Hiddify ensures that you can access the free internet with ease and peace of mind. 
+## Why Hiddify-Manager?
+The word *Hiddify* is a combination of hidden and simplify. We aim to bring together everything that helps to make it simple and hidden in **Hiddify-Manager**. In other words, it is a panel with a wide range of features and capabilities that helps you enjoy hassle-free and secure internet browsing. Serving as a user-friendly VPN solution, Hiddify-Manager ensures that you can access the free internet with ease and peace of mind. 
 
 ### Attractive features
 - **Quick installation**
@@ -103,11 +111,13 @@ And dozens of other features that you will notice upon installation.
 | Supported Configs | Supported Configs | Supported Configs |
 | - | - | - |
 | **Direct** | **CDN** | **Domain Fronting** |
+|- Reality XTLS vless<br>- Reality gRPC vless<br>- SSH<br>- Hysteria2<br>- TUICv5 | 
 |Trojan:<br>- TLS WS<br>- TLS TCP<br>- TLS gRPC<br>- TLS H2 WS<br>- TLS H2 TCP<br>- TLS H2 gRPC<br> |  Trojan:<br>- TLS WS<br>- TLS gRPC<br>- TLS H2 WS<br>- TLS H2 gRPC<br><br><br>| Trojan:<br>- TLS WS Fake<br><br><br><br><br><br> |
-| Vless:<br>- TLS WS<br>- HTTP WS<br>- TLS XTLS<br>- TLS gRPC<br>- TLS H2 TLS<br>- TLS H2 WS<br>- TLS H2 gRPC<br>- Reality XTLS<br>- Reality gRPC | Vless:<br>- TLS WS<br>- TLS gRPC<br>- HTTP WS<br>- TLS H2 WS<br>- TLS H2 gRPC<br><br><br><br><br>| Vless:<br>- TLS WS Fake<br>- HTTP WS Fake<br><br><br><br><br><br><br><br> |
+| Vless:<br>- TLS WS<br>- HTTP WS<br>- TLS XTLS<br>- TLS gRPC<br>- TLS H2 TLS<br>- TLS H2 WS<br>- TLS H2 gRPC| Vless:<br>- TLS WS<br>- TLS gRPC<br>- HTTP WS<br>- TLS H2 WS<br>- TLS H2 gRPC<br><br><br><br><br>| Vless:<br>- TLS WS Fake<br>- HTTP WS Fake<br><br><br><br><br><br><br><br> |
 | Vmess:<br>- TLS WS<br>- TLS TCP<br>- HTTP WS<br>- HTTP TCP<br>- TLS gRPC<br>- TLS H2 WS<br>- TLS H2 TCP<br> | Vmess:<br>- TLS WS<br>- TLS gRPC<br>- HTTP WS<br>- TLS H2 WS<br>- TLS H2 gRPC<br><br><br> | Vmess:<br>- TLS WS Fake<br>- HTTP WS Fake<br><br><br><br><br><br> |
 | V2ray:<br>- TLS WS<br>- HTTP WS<br>- TLS H2 |  V2ray:<br>- TLS WS<br>- HTTP WS<br>- TLS H2 | |
 | Shadowsocks:<br>- TLS Shadowtls<br>- HTTP Shadowtls<br>- TLS H2 Shadowtls<br>- TLS H3 Shadowtls | | |
+| -Wiregaurd <br>- SSH <br>- TUIC<br>- Hysteria2|||
 
 <!--
 | Supported Configs | Supported Configs |
@@ -122,7 +132,7 @@ And dozens of other features that you will notice upon installation.
 
 <details markdown="1"> <summary><h3>Smart proxy for domestic and filtered sites</h3> (click here)</summary>
  
-You can connect to the internet in 3 modes using Hiddify(Clash) client and Hiddify panel. 
+You can connect to the internet in 3 modes using Hiddify-Next and Hiddify-Manager. 
 1. This method only circumvents filtered websites via the proxies.
 2. This method circumvents all websites except domestic websites based in China, Russia and Iran. This way the domestic websites can be opened without any proxies (recommended)
 3. This method circumvents all websites. 
@@ -135,7 +145,7 @@ At the same time, the proposed solution is resistant to detection by the interne
 
 
 <details  markdown="1"> <summary>Supported operating systems</summary>
-Hiddify has been tested on Ubuntu 20.04 and 22.04. Ubuntu arm64 or amd64
+Hiddify-Manager has been tested on Ubuntu 22.04. Ubuntu arm64 or amd64
 </details>
 
 
@@ -160,6 +170,7 @@ To use DNS over HTTPS, just use the following DNS in the browser.
 
 <details markdown="1"> <summary>Redirector (CDN support)</summary> 
 When you want to share Telegram proxy or Shadowsocks proxy through other programs, it is possible to redirect with CDN support. For example, if you put the Shadowsocks configuration instead of "fullURL", clicking on this link will open Shadowsocks app and activate the proxy on it. For example:
+ 
  `https://yourdomain.com/yoursecret/redirect/fullURL` 
 
  Replace "fullURL" by the Shadowsocks configuration. 
@@ -173,46 +184,61 @@ When you want to share Telegram proxy or Shadowsocks proxy through other program
 </details>
 
 ## Installation and tutorials
-**Please find related information on our wiki page by clicking on image below.**
+**Please find tutorial information on our website by clicking on image below.**
 
-<div align="center" width="40%">
+<div align="center">
  
- [![Tutorials](https://github.com/hiddify/hiddify-config/blob/main/docs/Turorials_en.webp)](https://github.com/hiddify/hiddify-config/wiki)
- 
+ <a href="https://hiddify.com/manager/"><img width="100%" alt="All Tutorials" src="https://github.com/hiddify/Hiddify-Manager/assets/125398461/36b2bb34-1726-47ef-a0e3-e60e0e8bcfce" /></a>
+
+
  
  <!--
- <a href="https://github.com/hiddify/hiddify-config/wiki"><img width="40%" src="https://github.com/hiddify/hiddify-config/assets/125398461/77960650-1bd0-4a12-b8d5-2735bec33934" /></a>-->
+[![Tutorials](https://github.com/hiddify/hiddify-manager/blob/main/docs/Turorials_en.webp)](https://github.com/hiddify/hiddify-manager/wiki)
+ <a href="https://github.com/hiddify/hiddify-manager/wiki"><img width="40%" src="https://github.com/hiddify/hiddify-manager/assets/125398461/77960650-1bd0-4a12-b8d5-2735bec33934" /></a>-->
 
 </div>
+
+## Acknowledgements
+We would like to express our sincere appreciation to the contributors of the following projects, whose robust foundation and innovative features have significantly enhanced the success and functionality of this project.
+- [Sing-box](https://github.com/SagerNet/sing-box)
+- [Xray](https://github.com/XTLS/Xray-core#installation)
+- [Linux by Linus Torvalds](https://github.com/torvalds/linux)
+- Font: [Vazirmatn by Saber Rastikerdar](https://github.com/rastikerdar/vazirmatn)
 
 ## Donation And Support 
 The easiest way to support us is to click on the star (⭐) at the top of this page.
 
-We also need financial support for our services. All of our activities are done voluntarily and financial support will be spent on the development of the project. You can view our support addresses [here](https://github.com/hiddify/hiddify-config/wiki/support). 
+<div align=center>
+    
+<img alt="Star History Chart" width=50% src="https://api.star-history.com/svg?repos=Hiddify/hiddify-Manager&type=Date)](https://star-history.com/#Hiddify/hiddify-Manager&Date" />
+
+</div>
+
+We also need financial support for our services. All of our activities are done voluntarily and financial support will be spent on the development of the project. You can view our support addresses [here](https://github.com/hiddify/hiddify-manager/wiki/support). 
 
 
 
 ## Collaboration and Contact Information 
-We need your collaboration in order to develop this project. If you are specialists in these areas, please do not hesitate to contact us.
+We need your collaboration in order to develop this project. If you are specialists in these areas, please do not hesitate to contact us and mention your skill.
 
-* Media Production &nbsp;&nbsp;&nbsp;&nbsp;  
-* Python Developing &nbsp;&nbsp;&nbsp;&nbsp; ‌
+* Media Production
+* Python Developing‌
 * Kotlin Developing  
-* Flutter Developing &nbsp;&nbsp;&nbsp;&nbsp; 
+* Flutter Developing
 
 <div align=center>
 
 <!--
 ## Collaboration and Contact Information
 
-* Email: [hiddify@gmail.com](mailto:hiddify@gmail.com)
+* Email: [contribute@hiddify.com](mailto:contribute@hiddify.com)
 * Annoncements: [Telegram Channel](https://t.me/hiddify)
 * Discussion: [Telegram Group](https://t.me/hiddify_board/5)
 
 -->
-</br>
+<br>
 
-[![Email](https://img.shields.io/badge/Gmail-hiddify@gmail.com-green?style=flat-square&logo=gmail)](mailto:hiddify@gmail.com)
+[![Email](https://img.shields.io/badge/Gmail-contribute@hiddify.com-green?style=flat-square&logo=gmail)](mailto:contribute@hiddify.com)
 [![Telegram Channel](https://img.shields.io/endpoint?label=Channel&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify&color=blue)](https://telegram.dog/hiddify)
 [![Telegram Group](https://img.shields.io/endpoint?color=neon&label=Support%20Group&style=flat-square&url=https%3A%2F%2Ftg.sumanjay.workers.dev%2Fhiddify_board)](https://telegram.dog/hiddify_board)
 [![Youtube](https://img.shields.io/youtube/channel/views/UCxrmeMvVryNfB4XL35lXQNg?label=Youtube&style=flat-square&logo=youtube)](https://www.youtube.com/@hiddify)
@@ -227,10 +253,31 @@ We need your collaboration in order to develop this project. If you are speciali
  </p>
  
 <p align=center> 
-<a href="https://github.com/hiddify/hiddify-config/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=hiddify/hiddify-config" />
+<a href="https://github.com/hiddify/hiddify-manager/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=hiddify/hiddify-manager" />
 </a>
 </p>
 <p align=center>
  Made with <a rel="" target="_blank" href="https://contrib.rocks">Contrib.Rocks</a> 
 </p>
+<!-- Copy-paste in your Readme.md file -->
+
+<a href="https://next.ossinsight.io/widgets/official/analyze-repo-stars-history?repo_id=541755332" target="_blank" style="display: block" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/analyze-repo-stars-history/thumbnail.png?repo_id=541755332&image_size=auto&color_scheme=dark" width="721" height="auto">
+    <img alt="Star History of hiddify/Hiddify-Manager" src="https://next.ossinsight.io/widgets/official/analyze-repo-stars-history/thumbnail.png?repo_id=541755332&image_size=auto&color_scheme=light" width="721" height="auto">
+  </picture>
+</a>
+
+<!-- Made with [OSS Insight](https://ossinsight.io/) --> 
+
+<!-- Copy-paste in your Readme.md file -->
+
+<a href="https://next.ossinsight.io/widgets/official/analyze-repo-issue-opened-and-closed?repo_id=541755332" target="_blank" style="display: block" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/analyze-repo-issue-opened-and-closed/thumbnail.png?repo_id=541755332&image_size=auto&color_scheme=dark" width="721" height="auto">
+    <img alt="Issue Opened and Closed of hiddify/Hiddify-Manager" src="https://next.ossinsight.io/widgets/official/analyze-repo-issue-opened-and-closed/thumbnail.png?repo_id=541755332&image_size=auto&color_scheme=light" width="721" height="auto">
+  </picture>
+</a>
+
+<!-- Made with [OSS Insight](https://ossinsight.io/) -->

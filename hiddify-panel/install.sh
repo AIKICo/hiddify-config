@@ -1,65 +1,60 @@
-systemctl kill hiddify-admin.service  > /dev/null 2>&1
-systemctl disable hiddify-admin.service > /dev/null 2>&1
-#userdel -f hiddify-panel 2>&1
-useradd -m hiddify-panel -s /bin/bash 2>&1
-chown -R hiddify-panel:hiddify-panel  /home/hiddify-panel/ 2>&1
-su hiddify-panel -c localectl set-locale LANG=C.UTF-8 2>&1
-su hiddify-panel -c update-locale LANG=C.UTF-8 2>&1
+source ../common/utils.sh
+activate_python_venv
+install_package wireguard libev-dev libevdev2 default-libmysqlclient-dev build-essential pkg-config ssh-client
 
-chown -R hiddify-panel:hiddify-panel  . 2>&1
-# apt install -y python3-dev
-for req in pip3 uwsgi  python3 hiddifypanel lastversion jq;do
-    which $req > /dev/null 2>&1
-    if [[ "$?" != 0 ]];then
-            apt --fix-broken install -y
-            apt update
-            apt install -y python3-pip jq python3-dev
-            pip3 install pip 
-            pip3 install -U hiddifypanel lastversion  uwsgi "requests<=2.29.0"
-            break
-    fi
-done
+useradd -m hiddify-panel -s /bin/bash >/dev/null 2>&1
+usermod -aG hiddify-common hiddify-panel
+
+echo -n "" >> ../log/system/panel.log
+chown hiddify-panel ../log/system/panel.log
+chsh hiddify-panel -s /bin/bash
+
+chown -R hiddify-panel:hiddify-panel /home/hiddify-panel/ >/dev/null 2>&1
+localectl set-locale LANG=C.UTF-8 >/dev/null 2>&1
+su hiddify-panel -c update-locale LANG=C.UTF-8 >/dev/null 2>&1
+chown -R hiddify-panel:hiddify-panel . >/dev/null 2>&1
+# activate venv for hiddify-panel user
+if ! grep -Fxq "source /opt/hiddify-manager/.venv/bin/activate" "/home/hiddify-panel/.bashrc" && ! grep -Fxq "export PATH=/opt/hiddify-manager/.venv/bin:\$PATH" "/home/hiddify-panel/.bashrc"; then
+    echo "source /opt/hiddify-manager/.venv/bin/activate" >> "/home/hiddify-panel/.bashrc"
+    echo "export PATH=/opt/hiddify-manager/.venv/bin:\$PATH" >> "/home/hiddify-panel/.bashrc"
+fi
+
+pip uninstall -y flask-babelex >/dev/null 2>&1
+
+# install/build hiddifypanel package
+if [ -n "$HIDDIFY_PANLE_SOURCE_DIR" ]; then
+    echo "NOTICE: building hiddifypanel package from source..."
+    echo "NOTICE: the source dir $HIDDIFY_PANLE_SOURCE_DIR"
+    /opt/hiddify-manager/.venv/bin/pip install -e "$HIDDIFY_PANLE_SOURCE_DIR"
+else
+    echo "Installing hiddifypanel with the pip"
+    python -c "import hiddifypanel" || pip install -U hiddifypanel
+fi
 
 
-
-# ln -sf $(which gunicorn) /usr/bin/gunicorn
-
-#pip3 --disable-pip-version-check install -q -U hiddifypanel
-# pip uninstall -y hiddifypanel 
-# pip --disable-pip-version-check install -q -U git+https://github.com/hiddify/HiddifyPanel
-
-# ln -sf $(which gunicorn) /usr/bin/gunicorn
-ln -sf $(which uwsgi) /usr/local/bin/uwsgi 2>&1
-# hiddifypanel init-db
+ln -sf $(which uwsgi) /usr/local/bin/uwsgi >/dev/null 2>&1
 ln -sf $(pwd)/hiddify-panel.service /etc/systemd/system/hiddify-panel.service
 systemctl enable hiddify-panel.service
-if [ -f "../config.env" ]; then
-    su hiddify-panel -c "hiddifypanel import-config -c $(pwd)/../config.env"
-    if [ "$?" == 0 ];then
-            rm -f config.env
-            # echo "temporary disable removing config.env"
-    fi
-fi
-systemctl daemon-reload
-echo "*/1 * * * * root $(pwd)/update_usage.sh" > /etc/cron.d/hiddify_usage_update
-service cron reload
 
-systemctl start hiddify-panel.service
-systemctl status hiddify-panel.service --no-pager
+ln -sf $(pwd)/hiddify-panel-background-tasks.service /etc/systemd/system/hiddify-panel-background-tasks.service
+systemctl enable hiddify-panel-background-tasks.service
 
 
-echo "0 */6 * * * hiddify-panel $(pwd)/backup.sh" > /etc/cron.d/hiddify_auto_backup
-service cron reload
+systemctl daemon-reload >/dev/null 2>&1
+
+rm -rf /etc/cron.d/{hiddify_usage_update,hiddify_auto_backup}
+# echo "*/1 * * * * root $(pwd)/update_usage.sh" >/etc/cron.d/hiddify_usage_update
+# echo "0 */6 * * * hiddify-panel $(pwd)/backup.sh" >/etc/cron.d/hiddify_auto_backup
+service cron reload >/dev/null 2>&1
 
 
 ##### download videos
 
 if [[ ! -e "GeoLite2-ASN.mmdb" || $(find "GeoLite2-ASN.mmdb" -mtime +1) ]]; then
-    wget -O GeoLite2-ASN.mmdb      https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb  
+    curl --connect-timeout 10 -sL -o GeoLite2-ASN.mmdb1 https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-ASN.mmdb && mv GeoLite2-ASN.mmdb1 GeoLite2-ASN.mmdb
 fi
 if [[ ! -e "GeoLite2-Country.mmdb" || $(find "GeoLite2-Country.mmdb" -mtime +1) ]]; then
-    wget -O GeoLite2-Country.mmdb  https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb 
+    curl --connect-timeout 10 -sL -o GeoLite2-Country.mmdb1 https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb && mv GeoLite2-Country.mmdb1 GeoLite2-Country.mmdb
 fi
 
-
-bash download_yt.sh & 
+# bash download_yt.sh &

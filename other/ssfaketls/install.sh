@@ -1,15 +1,7 @@
-echo "shadowsocks proxy install.sh $*"
-systemctl kill ss-faketls.service
+source /opt/hiddify-manager/common/utils.sh
 
-apt-get install -y  shadowsocks-libev simple-obfs
-
-
-
-ln -sf $(pwd)/ss-faketls.service /etc/systemd/system/ss-faketls.service
-
-
-
-# if [[ "$1" ]]; then
-# 	sed -i "s/defaultusersecret/$1/g" config-*.json
-# fi
-
+install_package shadowsocks-libev simple-obfs
+chmod 600 *.service*
+ln -sf $(pwd)/hiddify-ss-faketls.service /etc/systemd/system/hiddify-ss-faketls.service
+systemctl disable --now ss-faketls.service > /dev/null 2>&1
+rm ss-faketls.service* > /dev/null 2>&1

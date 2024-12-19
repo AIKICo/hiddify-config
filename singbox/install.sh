@@ -1,12 +1,21 @@
-pkg=$(dpkg --print-architecture)
+source ../common/utils.sh
+source ../common/package_manager.sh
+rm -rf configs/*.template
 
-curl -Lo sb.zip https://github.com/hiddify/hiddify-sing-box/releases/latest/download/sing-box-linux-$pkg.zip
-unzip -o sb.zip
-cp -f sing-box-*/sing-box .
-rm -r sb.zip sing-box-*
-chown root:root sing-box
-chmod +x sing-box
+# latest= #$(get_release_version hiddify-sing-box)
+version="" #use specific version if needed otherwise it will use the latest
 
-ln -sf /opt/hiddify-config/singbox/sing-box /usr/bin/sing-box
 
-rm geosite.db
+
+download_package singbox sb.zip $version
+if [ "$?" == "0"  ] || ! is_installed ./sing-box; then
+    install_package unzip 
+    unzip -o sb.zip > /dev/null || exit 1
+    cp -f sing-box-*/sing-box . 2>/dev/null || exit 2
+    rm -r sb.zip sing-box-* 2>/dev/null || exit 3
+    chown root:root sing-box || exit 4
+    chmod +x sing-box || exit 5
+    ln -sf /opt/hiddify-manager/singbox/sing-box /usr/bin/sing-box || exit 6
+    rm geosite.db 2>/dev/null 
+    set_installed_version singbox $version
+fi
